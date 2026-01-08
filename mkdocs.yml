@@ -85,28 +85,29 @@ nav:
   - 讲义:
     - QEMU 训练营 2026:
       - 训练营介绍: tutorial/2026/index.md
+      - 1. 导学阶段: tutorial/2026/ch0/index.md
     - QEMU 训练营 2025:
       - 训练营介绍: tutorial/2025/index.md
       - 1. 导学阶段: tutorial/2025/ch0/index.md
       - 2. 基础阶段:
-        - a. 本章导览: tutorial/2025/ch1/index.md
-        - b. 虚拟技术发展历史: tutorial/2025/ch1/sec1/vm-history.md
-        - c. Hypervisor 技术介绍: tutorial/2025/ch1/sec2/hypervisor.md
-        - d. QEMU 基本知识介绍:
+        - 本章导览: tutorial/2025/ch1/index.md
+        - a. 虚拟技术发展历史: tutorial/2025/ch1/sec1/vm-history.md
+        - b. Hypervisor 技术介绍: tutorial/2025/ch1/sec2/hypervisor.md
+        - c. QEMU 基本知识介绍:
           - 面向对象建模: tutorial/2025/ch1/sec3/qemu-qom.md
           - 地址空间抽象: tutorial/2025/ch1/sec3/qemu-memory-region.md
       - 3. 专业阶段:
-        - a. 本章导览: tutorial/2025/ch2/index.md
-        - b. QEMU 初始化: tutorial/2025/ch2/sec1/qemu-init.md
-        - c. QEMU 加速器:
+        - 本章导览: tutorial/2025/ch2/index.md
+        - a. QEMU 初始化: tutorial/2025/ch2/sec1/qemu-init.md
+        - b. QEMU 加速器:
           - Tiny Code Generator:
             - TCG Translation: tutorial/2025/ch2/sec2/qemu-accel-tcg/tcg-translation.md
             - Decodetree: tutorial/2025/ch2/sec2/qemu-accel-tcg/tcg-add-guest-insn.md
             - TCG IR: tutorial/2025/ch2/sec2/qemu-accel-tcg/tcg-ir.md
           - Hypervisor: tutorial/2025/ch2/sec2/qemu-accel-kvm.md
-        - d. QEMU Arch 模拟:
+        - c. QEMU Arch 模拟:
             - RISC-V 模拟: tutorial/2025/ch2/sec3/qemu-tcg-riscv.md
-        - e. QEMU 硬件建模:
+        - d. QEMU 硬件建模:
             - C 语言建模:
               - Machine 建模: tutorial/2025/ch2/sec4/c-model/machine-model.md
               - 外设建模（串口）: tutorial/2025/ch2/sec4/c-model/peripheral-model-uart.md
@@ -115,21 +116,21 @@ nav:
             - Rust 建模:
               - Rust in QEMU: tutorial/2025/ch2/sec4/rust-model/rust-in-qemu.md
               - 外设建模: tutorial/2025/ch2/sec4/rust-model/peripheral-model.md
-        - f. QEMU 调试:
+        - e. QEMU 调试:
           - 源码调试: tutorial/2025/ch2/sec5/debug-qemu.md
           - 远程调试: tutorial/2025/ch2/sec5/gdbstub.md
           - 日志调试: tutorial/2025/ch2/sec5/qemu-log.md
           - 追踪事件: tutorial/2025/ch2/sec5/trace-event.md
-        - g. QEMU 测试:
+        - f. QEMU 测试:
             - Qtest: tutorial/2025/ch2/sec6/qtest.md
             - TCG 测试: tutorial/2025/ch2/sec6/test-tcg.md
-        - h. QEMU 虚拟化实践:
+        - g. QEMU 虚拟化实践:
             - 创建和管理虚拟机: tutorial/2025/ch2/sec7/qemu-virtual.md
             - 模拟 RISCV 虚拟化: tutorial/2025/ch2/sec7/emulate-rvh.md
       - 4. 项目阶段:
-        - a. 本章导览: tutorial/2025/ch3/index.md
-        - b. QEMU 建模 K230: tutorial/2025/ch3/sec1/k230-model.md
-        - c. QEMU 测评 OS: tutorial/2025/ch3/sec2/os-test.md
+        - 本章导览: tutorial/2025/ch3/index.md
+        - a. QEMU 建模 K230: tutorial/2025/ch3/sec1/k230-model.md
+        - b. QEMU 测评 OS: tutorial/2025/ch3/sec2/os-test.md
       - 5. 课程附录:
         - a. Prof Level Manual: tutorial/2025/ch4/prof-level-manual.md
         - b. G233 Datasheet: tutorial/2025/ch4/g233-board-datasheet.md
