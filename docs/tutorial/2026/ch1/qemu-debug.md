@@ -178,7 +178,7 @@ QEMU 有一个很好用的调试工具 tracing，可以用来跟踪 QEMU 内部�
 在 QEMU 的启动选项中，通过增加 trace 参数，来指明要追踪的事件，这里以追踪 memory region 的访存事件为例：
 
 ```bash
-$ qemu-system-riscv64 -M virt --trace "memory_region_ops_*" # *号代表前面的字符作为匹配对象
+$ $QEMU $QEMU_ARGS -M virt --trace "memory_region_ops_*" # *号代表前面的字符作为匹配对象
 ...
 719585@1608130130.441188:memory_region_ops_read cpu 0 mr 0x562fdfbb3820 addr 0x3cc value 0x67 size 1
 719585@1608130130.441190:memory_region_ops_write cpu 0 mr 0x562fdfbd2f00 addr 0x3d4 value 0x70e size 2
@@ -199,19 +199,19 @@ memory_region_ops_write(int cpu_index, void *mr, uint64_t addr, uint64_t 
 ```bash
 echo "memory_region_ops_*" >/tmp/events
 echo "kvm_*" >>/tmp/events
-qemu-system-riscv64 -M --trace events=/tmp/events ...
+$QEMU $QEMU_ARGS -M --trace events=/tmp/events ...
 ```
 
 同时 tracing 也支持输出到文件，我们修改上面的 QEMU 命令：
 
 ```bash
-qemu-system-riscv64 -M --trace events=/tmp/events,file=/tmp/event.log ...
+$QEMU $QEMU_ARGS -M --trace events=/tmp/events,file=/tmp/event.log ...
 ```
 
 如果不想在 QEMU 启动选项里开启，我们也可以在 QEMU 的 monitor 中动态开启，这样更灵活一些，操作如下：
 
 ```bash
-$ qemu-system-riscv64 -M virt -monitor stdio -S -display none
+$ $QEMU $QEMU_ARGS -M virt -monitor stdio -S -display none
 (qemu) trace-event memory_region_ops_read on
 (qemu) c
 ...
