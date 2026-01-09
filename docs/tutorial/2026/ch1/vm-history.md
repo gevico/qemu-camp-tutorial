@@ -2,7 +2,7 @@
 
 !!! note "主要贡献者"
 
-    - 作者：[@zevorn](https://github.com/zevorn)
+    - 作者：[@zevorn](https://github.com/zevorn) [@Plucky923](https://github.com/Plucky923)
 
 QEMU 是一个成熟的虚拟化软件和模拟器，虽然 QEMU 已经发展了二十多年，但是虚拟化技术的诞生，还要往前追溯很远。在这一章，我们将回顾虚拟化技术的发展历史及常见的应用场景，你可以选择感兴趣的片段进行阅读，希望可以给你带来一些启发。
 
