@@ -12,7 +12,9 @@
 qemu-system-riscv64 -M virt -s -S -nographic
 ```
 
-这个命令让 QEMU 创建了一个 virt Machine，以 nographic 模式运行，串口输出到终端，默认 bios 使用 OpenSBI，并且开启了 gdbstub 远程调试功能，允许 riscv64-gdb 来调试客户机程序，默认端口号是 1234，同时停在第一条指令，等待 gdb 的连接。
+这个命令让 QEMU 创建了一个 `virt` 机器模型，以 `-nographic` 模式运行，并开启了 gdbstub 远程调试功能。
+
+其中，`-s` 会让 QEMU 在 TCP 1234 端口等待 gdb 连接，`-S` 会让 guest 在 gdb 明确发出继续命令前保持暂停；对于 `virt`（以及 `sifive_u`）这类机器，不指定 `-bios` 时默认等同于 `-bios default`，会自动加载随 QEMU 发布的默认 OpenSBI 固件。你可以使用任意支持 RISC-V 的 gdb（例如 `riscv64-elf-gdb`）连接该 gdbstub。
 
 !!! note
     我们先观察 virt Machine 是如何创建的，然后再探讨一下 QEMU 是如何加载 OpenSBI 的二进制程序到 virt Machine 的内存里面的，最后再看 QEMU 是如何初始化 vCPU 指向第一条 Guest 指令的。
@@ -25,7 +27,7 @@ qemu-system-riscv64 -M virt -s -S -nographic
 
 最方便的办法，是通过 gdb 来反向定位源码。QEMU 源码中充斥各种 C 宏魔法，对于刚接触 QEMU 的人来说，看起来会有一些吃力，使用 gdb 调试，可以更有针对性分析我们关注的部分，抽丝剥茧，层层拨开 QEMU 源码的神秘面纱。
 
-按照前面 QOM 的讲解，virt Machine 必定属于一个 Qobject，我们可以在它的 class 初始化或者 object 实例化的源码位置，打一个断点，来观察调用栈。这里我们先搜索一下 virt Machine 源码里关于 typeinfo 相关的代码：
+按照前面 QOM 的讲解，virt Machine 也是一个 QOM `Object`（而不是 QAPI 的 `QObject`），我们可以在它的 class 初始化或者对象实例化的源码位置，打一个断点，来观察调用栈。这里我们先搜索一下 virt Machine 源码里关于 typeinfo 相关的代码：
 
 ```c
 static const TypeInfo virt_machine_typeinfo = {
@@ -104,7 +106,7 @@ Thread 1 "qemu-system-ris" hit Breakpoint 2, virt_machine_instance_init (obj=0x5
 main() → qemu_init() → qemu_create_machine()
 ```
 
-然后先创建 class，然后再实例化 qobject，这和前面讲解 QOM 给出的流程一致。
+然后先创建 class，然后再实例化 QOM 对象，这和前面讲解 QOM 给出的流程一致。
 
 另外我们还比较关注这两个函数内部的实现，这时候可以进一步阅读代码：
 
@@ -284,21 +286,20 @@ static void virt_machine_init(MachineState *machine)
 
 ```
 virt_machine_init()
-  → riscv_socket_count()  // 创建 CPU Socket
-  → memory_region_init() // 初始化内存区域
-  → create_fdt()         // 生成设备树(DTB)
+  → riscv_socket_count()       // 获取 socket 数量
+  → object_initialize_child()  // 创建每个 socket 的 CPU/SoC 对象
+  → memory_region_init_*()     // 初始化/映射 MemoryRegion
+  → create_fdt()               // 生成 DTB（未指定 -dtb 时）
 ```
 
 CPU socket 主要是可以按照簇（cluster）来创建多组 CPU 核心，然后按照地址空间初始化各种设备，
-最后为 virt 在内存中生产一个设备树，方便运行 linux kernel。
+最后为 virt 在内存中生成一个设备树，方便运行 linux kernel。
 
 那么，是在什么位置加载的 OpenSBI 二进制程序呢？
 
 ## 加载客户机程序
 
-有一点可以明确，那么肯定是存储 OpenSBI 的设备模型先被创建并初始化好，才能加载客户机程序二进制
-数据进去，按照这个思路，我们可以找到如下代码（实际上 QEMU 是在整个 virt Machine 就绪以后，
-才开始加载客户机程序，它被安排在 machine_done 中实现）：
+有一点可以明确：用于承载 OpenSBI 的内存区域（`MemoryRegion`，通常是 DRAM 或 ROM）需要先被创建并初始化好，才能把固件/镜像加载进去。按照这个思路，我们可以找到如下代码（实际上 QEMU 是在整个 virt Machine 就绪以后，才开始加载客户机程序，它被安排在 machine_done 中实现）：
 
 ```c
 static void virt_machine_done(Notifier *notifier, void *data)
@@ -350,12 +351,12 @@ char *riscv_find_firmware(const char *firmware_filename,
 }
 ```
 
-可以看到，如果我们默认不指定 -bios，或者 -bios default，那么 QEMU 将默认加载 OpenSBI 二进制数据。
+可以看到，如果我们不指定 `-bios`，或者显式使用 `-bios default`，那么 QEMU 将加载随 QEMU 发布的默认 OpenSBI 固件；如果显式使用 `-bios none`，则不会自动加载任何固件。
 
 
 ## vCPU 执行的第一条指令
 
-如果你使用 riscv64-gdb 远程连接上 QEMU 以后，你会发现：
+如果你使用 `riscv64-elf-gdb` 远程连接上 QEMU 以后，你会发现：
 
 ```bash
 riscv64-elf-gdb -ex "target remote localhost:1234"
@@ -433,7 +434,7 @@ static void riscv_cpu_reset_hold(Object *obj, ResetType type)
 #define DEFAULT_RSTVEC      0x1000
 ```
 
-到这里，我详细你已经掌握了一些分析 QEMU 初始化流程的方法。
+到这里，我相信你已经掌握了一些分析 QEMU 初始化流程的方法。
 
 !!! note "Task"
 
