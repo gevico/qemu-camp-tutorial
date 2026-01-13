@@ -96,6 +96,21 @@ nav:
         - f. 常用调试方法: tutorial/2026/ch1/qemu-debug.md
       - 3. 专业阶段:
         - 本章导览: tutorial/2026/ch2/index.md
+        - a. CPU 建模流程: tutorial/2026/ch2/qemu-cpu-model.md
+        - b. TCG 工作原理: tutorial/2026/ch2/qemu-tcg.md
+        - c. 模拟客户机指令: tutorial/2026/ch2/qemu-insn.md
+        - d. 模拟 CPU MMU: tutorial/2026/ch2/qemu-softmmu.md
+        - e. 模拟中断和异常: tutorial/2026/ch2/qemu-intr.md
+        - f. 模拟多核场景: tutorial/2026/ch2/qemu-multi-core.md
+        - g. 主板建模流程: tutorial/2026/ch2/qemu-machine.md
+        - h. 外设建模流程: tutorial/2026/ch2/qemu-hw.md
+        - i. 时钟系统介绍: tutorial/2026/ch2/qemu-clock.md
+        - j. GPGPU 原理: tutorial/2026/ch2/gpgpu.md
+        - k. PCIe 模拟方法: tutorial/2026/ch2/qemu-pcie.md
+        - l. kernel 运行机制: tutorial/2026/ch2/kernel.md
+        - m. Rust FFI 介绍: tutorial/2026/ch2/qemu-rust-ffi.md
+        - n. Rust 建模流程: tutorial/2026/ch2/qemu-rust-model.md
+        - o. Rust 测题开发: tutorial/2026/ch2/qemu-rust-test.md
       - 4. 项目阶段:
         - 本章导览: tutorial/2026/ch3/index.md
     - QEMU 训练营 2025:
