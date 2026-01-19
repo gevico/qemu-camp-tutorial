@@ -113,6 +113,10 @@ nav:
         - o. Rust 测题开发: tutorial/2026/ch2/qemu-rust-test.md
       - 4. 项目阶段:
         - 本章导览: tutorial/2026/ch3/index.md
+        - a. 数字星务计算机: tutorial/2026/ch3/qemu-k230.md
+        - b. 建模 AI 加速卡: tutorial/2026/ch3/qemu-cxlemu.md
+        - c. 大模型建模外设: tutorial/2026/ch3/qemu-agent.md
+        - d. 应用跨平台转译: tutorial/2026/ch3/qemu-wine-ce.md
     - QEMU 训练营 2025:
       - 训练营介绍: tutorial/2025/index.md
       - 1. 导学阶段: tutorial/2025/ch0/index.md
