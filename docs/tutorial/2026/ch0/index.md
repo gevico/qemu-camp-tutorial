@@ -36,6 +36,8 @@
 
     [ima 知识库: QEMU | 格维开源社区][qemu-ima-link]
 
+    [ima 知识库: Linux | 格维开源社区][linux-ima-link]
+
     [ima 知识库: RISC-V | 格维开源社区][riscv-ima-link]
 
 ### QEMU 开源相关
@@ -58,3 +60,4 @@
 [gpu-history-link]: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNzQ5MTExNw==&action=getalbum&album_id=2538479717163761664&scene=126&sessionid=1767843472496#wechat_redirect
 [riscv-arch-book-link]: https://weread.qq.com/web/reader/93d32980813ab937ag01027b
 [riscv-ima-link]: https://ima.qq.com/wiki/?shareId=d61a408f97d541e435252e06621456a0d40691fa7a4059008933fb72873b605f
+[linux-ima-link]: https://ima.qq.com/wiki/?shareId=361fb581e4ddf2c0d7d4e3ba062b66df294e9b13976530804bd75a6c138d58a8
