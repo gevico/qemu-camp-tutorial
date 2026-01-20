@@ -179,6 +179,7 @@ nav:
   - 博客:
     - 介绍页: blogs/index.md
     - QEMU 训练营 2025 专业阶段实验解析: blogs/qemu-camp-2025-stage2-note.md
+    - 浅析虚拟机软件仿真中的解释技术: blogs/simulater-interp.md
   - 新闻:
     - 2026 年:
       - 01 月 07 号: news/2026/qemu-camp-update-2026-01-07.md
