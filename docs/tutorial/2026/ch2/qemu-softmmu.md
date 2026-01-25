@@ -18,7 +18,7 @@ QEMU 官方文档里对 SoftMMU 的描述非常直接：系统模式之所以叫
 
 - **AddressSpace**：客户机“可见”的地址空间（如系统内存、I/O 地址空间）。
 - **MemoryRegion**：QEMU 用来描述一段内存或设备映射的抽象对象，前面的章节已经详细讲过。
-- **FlatView**：把 AddressSpace 中所有 MemoryRegion “摊平成”可查表的结构，便于快速翻译。
+- **FlatView**：把 AddressSpace 中所有 MemoryRegion“摊平成”可查表的结构，便于快速翻译。
 - **SoftTLB**：QEMU 在系统模式下维护的 TLB，用来缓存地址转换结果。
 
 这几个概念一起构成了 SoftMMU 的核心数据路径。
@@ -70,7 +70,7 @@ bool (*tlb_fill)(CPUState *cpu, vaddr address, int size,
 
 ## 从地址到设备：FlatView
 
-SoftMMU 在系统模式下会把 AddressSpace “拍平”成 FlatView，翻译时先在 FlatView 中做定位。
+SoftMMU 在系统模式下会把 AddressSpace“拍平”成 FlatView，翻译时先在 FlatView 中做定位。
 如果遇到 IOMMU，还会递归做二次翻译（见 `system/physmem.c`）：
 
 ```c
