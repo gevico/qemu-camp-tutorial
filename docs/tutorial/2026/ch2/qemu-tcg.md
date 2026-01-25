@@ -4,7 +4,7 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-QEMU 支持多种 accel，但大体可以分为两种：指令模拟技术（TCG）、虚拟化技术（KVM、HVF）等。QEMU 有两种主要的运行模式：System mode 模拟整个机器（CPU、内存和虚拟设备）以运行客户机操作系统；User mode 则允许在一个 CPU 架构上运行为另一个 CPU 编译的进程，此时 CPU 始终被模拟。
+QEMU 支持多种 accel，但大体可以分为两种：指令模拟技术（TCG）、虚拟化技术（KVM、HVF）等。QEMU 有两种主要的运行模式：System mode 模拟整个机器（CPU、内存和虚拟设备）以运行客户机操作系统；User mode 则允许在一个 CPU 架构上运行为另一个 CPU 编译的用户态进程，此时 CPU 始终被模拟，主要支持 Linux 用户态程序。
 
 !!! tip "常见翻译技术"
 
@@ -36,7 +36,7 @@ QEMU 支持多种 accel，但大体可以分为两种：指令模拟技术（TCG
       Guest                                          Host
 ```
 
-TCG IR 由强类型的操作（ops）和变量组成，指令通常按“输出 -> 输入 -> 常量”的顺序表达。实际生成时应使用 `tcg_gen_xxx()` 接口，而非直接拼装 op。
+TCG IR 由强类型的操作（ops）和变量组成，操作的参数通常按“输出 -> 输入 -> 常量”的顺序表达，接口形式为 `tcg_gen_xxx()` 。
 
 - 变量类型：`cpu_env` 是固定全局变量，指向 `CPUArchState`；`TEMP_GLOBAL` 映射到 `CPUArchState` 内存位置；`TEMP_CONST` 是 TB 内唯一化的常量；`TEMP_TB`/`TEMP_EBB` 仅在 TB 或扩展基本块内存活。
 
@@ -63,11 +63,11 @@ TCG IR 由强类型的操作（ops）和变量组成，指令通常按“输出 
 
 ## TCG 翻译流程
 
-TCG 的二进制转换是以代码块（基本块，Basic Block）为基本单元，翻译的产物为翻译块（Translation Block，TB）。
+TCG 的二进制转换是以客户机指令序列的代码块（基本块，Basic Block）为基本单元，翻译后的目标产物为翻译块（Translation Block，TB），对应为宿主机上可以运行的指令序列。注意，TCG 每次只会翻译一个 BB。
 
 基本块的划分规则：分支指令；特权指令/异常；代码段跨页。
 
-而翻译块是一个单入口、多出口区域，对应以标签或任何分支指令结束的指令序列。多个翻译块可以在特定条件下被合并到一起，通常是是由零个或多个条件分支指令的直通路径连接起来的。
+而翻译块是一个单入口、多出口区域，对应以标签或任何分支指令结束的指令序列。多个翻译块可以在特定条件下被合并到一起（下文的 chained TB），通常是是由零个或多个条件分支指令的直通路径连接起来的。
 
 下面是每个翻译块执行的逻辑：
 
@@ -182,12 +182,12 @@ TCG 在 TB 内假设部分 CPU 状态恒定（如特权级、段基址等），�
 
 !!! tip "注意事项"
 
-    两个 chained tb 对应的 Guest 指令需要在同一个 Guest page 内。这是为了保证地址翻译的效率和一致性。当客户机代码跨越不同页时，QEMU 取指令必须通过翻译客户机代码或搜索 TB 哈希表，这两种方式都需要进行客户机虚拟地址到物理地址的翻译。
+    两个 chained TB 对应的 Guest 指令需要在同一个 Guest page 内。这是为了保证地址翻译的效率和一致性。当客户机代码跨越不同页时，QEMU 取指令必须通过翻译客户机代码或搜索 TB 哈希表，这两种方式都需要进行客户机虚拟地址到物理地址的翻译。
 
 
 ## 代码缓存管理
 
-在 qemu 启动的早期会执行一个函数叫 tcg_init_machine, 完成 code_buffer 的申请和初始化。
+在 qemu 启动的早期会执行一个函数叫 tcg_init_machine, 完成 code_buffer 的申请和初始化，code_buffer 用于管理翻译块的缓存。
 
 ```
 code_buffer = mmap()
@@ -204,6 +204,10 @@ v                                              v
 |                                    tb.tc.ptr
 tcg_qemu_tb_exec
 ```
+
+在 coder_buffer 的开头，会首先创建对应当前 Host 的上下文切换的 prologue 和 epilogue，类似 C 语言函数调用的序言和结尾。用于从 Host 世界切换到 Guest 世界。每次生成 TB，会按照现生成管理当前 TB 的结构体，再生成 TB 本身的顺序来写入 code_buffer。
+
+当 code_buffer 的容量不足时，会进行 TB flush，刷掉全部的 TB，再重新生成。
 
 - 后续所有代码翻译和执行的工作，都围绕 code_buffer 展开
 
