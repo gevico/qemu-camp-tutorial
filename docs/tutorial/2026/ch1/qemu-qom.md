@@ -717,3 +717,7 @@ void qdev_init_gpio_out_named(DeviceState *dev, qemu_irq *pins,
     gpio_list->num_out += n;
 }
 ```
+
+!!! question "随堂测验"
+
+    [>> 【点击进入随堂测验】2-3 分钟小测，快速巩固 ☄](hhttps://ima.qq.com/quiz?quizId=1J6CHlpvIscf7N8tJ9n2EvtVJC6EcvYNvRTOsQfZN0R)
