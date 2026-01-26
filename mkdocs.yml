@@ -111,7 +111,7 @@ nav:
         - i. 时钟系统介绍: tutorial/2026/ch2/qemu-clock.md
         - j. GPGPU 原理: tutorial/2026/ch2/qemu-gpgpu.md
         - k. PCIe 模拟方法: tutorial/2026/ch2/qemu-pcie.md
-        - l. kernel 运行机制: tutorial/2026/ch2/kernel.md
+        - l. kernel 运行机制: tutorial/2026/ch2/qemu-gpgpu-kernel.md
         - m. Rust FFI 介绍: tutorial/2026/ch2/qemu-rust-ffi.md
         - n. Rust 建模流程: tutorial/2026/ch2/qemu-rust-model.md
         - o. Rust 测题开发: tutorial/2026/ch2/qemu-rust-test.md
