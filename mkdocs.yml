@@ -80,9 +80,9 @@ theme:
     - search.share
     - header.autohide
 extra_css:
-  - stylesheets/extra.css
+  - plugins/stylesheets/extra.css
 extra_javascript:
-  - javascripts/toc-collapse.js
+  - plugins/javascripts/toc-collapse.js
 
 nav:
   - 主页: index.md
