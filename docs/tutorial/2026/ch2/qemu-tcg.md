@@ -6,17 +6,25 @@
 
 QEMU 支持多种 accel，但大体可以分为两种：指令模拟技术（TCG）、虚拟化技术（KVM、HVF）等。QEMU 有两种主要的运行模式：System mode 模拟整个机器（CPU、内存和虚拟设备）以运行客户机操作系统；User mode 则允许在一个 CPU 架构上运行为另一个 CPU 编译的用户态进程，此时 CPU 始终被模拟，主要支持 Linux 用户态程序。
 
-!!! tip "常见翻译技术"
+!!! tip "概览"
 
-    - 解释器：Interpreter，每次解析并执行一条 Guest 指令，循环往复。
+    - TCG 作为动态二进制翻译引擎的角色
+    - IR 结构与 TB/BB 的基本概念
+    - 翻译流程与执行路径
+    - MTTCG 多线程模型
+    - 跳转优化、代码缓存与性能分析
 
-    - 静态二进制翻译：Static Binary Translation，在程序运行前进行翻译。运行时没有翻译开销，优化幅度有限。
+## 常见二进制翻译技术
 
-    - 动态二进制翻译：Dynamic Binary Translation，在程序运行时动态翻译。一般按照程序 trace 翻译，不会全量翻译，能对热点代码进行深度优化。
+- 解释器：Interpreter，每次解析并执行一条 Guest 指令，循环往复。
 
-我们先聊聊 TCG(Tiny Code Generator) ，这最初是一个 C 语言的编译器后端，后来演化为 QEMU 的二进制动态编译（翻译）引擎。除了 TCG，QEMU 还有一个 TCI（解释执行），但是目前用的较少。TCG 是一个 JIT（即时）编译器，用于在软件中模拟客户机 CPU。它是 QEMU 支持的加速器之一，支持多种客户机/主机架构组合。
+- 静态翻译：Static Binary Translation，在程序运行前进行翻译。运行时没有翻译开销，优化幅度有限。
 
-!!! note "在 TCG 上下文中，有些术语需要明确"
+- 动态翻译：Dynamic Binary Translation，在程序运行时动态翻译。一般按照程序 trace 翻译，不会全量翻译，能对热点代码进行深度优化。
+
+我们主要聊聊 TCG(Tiny Code Generator) ，最初是一个 C 语言的编译器后端，后来演化为 QEMU 的二进制动态编译（翻译）引擎。除了 TCG，QEMU 还有一个 TCI（解释执行），但是目前用的较少。TCG 是一个 JIT（即时）编译器，用于在软件中模拟客户机 CPU。它是 QEMU 支持的加速器之一，支持多种客户机/主机架构组合。
+
+!!! note "术语"
 
     - Guest：指被模拟的架构，例如 QEMU 模拟 Arm CPU 的代码位于 `target/arm/`。
 

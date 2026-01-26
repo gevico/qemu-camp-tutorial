@@ -4,14 +4,14 @@
 
 PL011 的实现位于 `hw/char/pl011.c`，状态定义在 `include/hw/char/pl011.h`。它是一个典型的 SysBus 设备：通过 QOM 注册类型、用状态结构描述寄存器与 FIFO、用 MMIO 回调响应访问、并通过 IRQ 线连接到平台中断控制器（如 GIC）。
 
-## 总览
+!!! tip "概览"
 
-- QOM 注册类型，并定义变体
-- 状态结构覆盖寄存器、FIFO、IRQ、时钟
-- instance_init 配置 MMIO/IRQ/时钟
-- realize 绑定 chardev 回调
-- MMIO 读写驱动寄存器与 FIFO
-- 机型侧完成地址映射与中断连接
+    - QOM 注册类型，并定义变体
+    - 状态结构覆盖寄存器、FIFO、IRQ、时钟
+    - instance_init 配置 MMIO/IRQ/时钟
+    - realize 绑定 chardev 回调
+    - MMIO 读写驱动寄存器与 FIFO
+    - 机型侧完成地址映射与中断连接
 
 ## 类型注册
 

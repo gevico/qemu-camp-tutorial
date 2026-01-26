@@ -8,6 +8,14 @@ SoftMMU 是 QEMU 系统模式（system mode）的核心。它用软件实现了�
 
 如果你只记住一句话：**SoftMMU 负责把“客户机虚拟地址”变成“宿主机可访问的内存或设备操作”**。
 
+!!! tip "概览"
+
+    - SoftMMU 在 system mode 下的定位与职责
+    - AddressSpace/MemoryRegion/FlatView/SoftTLB 的关系
+    - GVA→GPA→HVA 的地址转换路径
+    - TLB miss 与 `tlb_fill` 回调机制
+    - IOMMU/DMA 与设备访问的协作路径
+
 ## SoftMMU 的定位
 
 QEMU 官方文档里对 SoftMMU 的描述非常直接：系统模式之所以叫 softmmu，是因为它用软件实现 MMU 与 TLB（Translation Lookaside Buffer）。这也是它和 user mode 的根本差异之一：user mode 不实现完整的软 MMU，而是依赖宿主机的 MMU 与 OS 来做地址管理（直接通过 `mmap()` 来为客户机内存分配内存）。

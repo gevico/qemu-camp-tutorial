@@ -4,11 +4,10 @@
 
 本阶段，我们将会讨论：
 
-!!! tip
+!!! tip "概览"
 
-    - QEMU CPU 建模：RISC-V 体系结构相关与 TCG 二进制动态翻译技术；
-    - QEMU 外设建模：主板与外设建模流程与相关机制（比如时钟系统、总线）；
-    - QEMU GPGPU 建模：GPGPU 体系结构与相关外设等；
-    - Rust for QEMU：外设建模、测试与 FFI 原理机制。
-
+    - QEMU CPU 建模：RISC-V 体系结构相关与 TCG 二进制动态翻译技术
+    - QEMU 外设建模：主板与外设建模流程与相关机制（比如时钟系统、总线）
+    - QEMU GPGPU 建模：GPGPU 体系结构与相关外设等
+    - Rust for QEMU：外设建模、测试与 FFI 原理机制
 
