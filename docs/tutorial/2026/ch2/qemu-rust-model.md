@@ -43,7 +43,7 @@ Rust 设备通常与 C 设备并存，Rust 版本启用失败时仍可回退到 
 
 因此，I2C 设备的实现重点并不在“设备本身”，而是先建立 **Rust 的 I2C Bus/Slave 基础设施**，让后续设备复用这一层能力。
 
-## GPIO 设备（PCF8574）
+## GPIO 设备
 
 PCF8574 是典型的 I2C GPIO 扩展器：通过 I2C 数据字节把 8 路 GPIO 的电平映射为位图。Rust 版本的实现通常包含：
 
@@ -85,8 +85,8 @@ Rust 外设建模的关键在于：**先建立总线与基础封装，再实现�
 
 !!! tip "进一步阅读"
 
-    [RFC PATCH v3 0/4] rust/hw: Add the I2C and the first GPIO device  
+    [RFC PATCH v3 0/4] rust/hw: Add the I2C and the first GPIO device
     https://yhbt.net/lore/qemu-rust/cover.1764426204.git.chenmiao@openatom.club/
 
-    [RESEND RFC PATCH V3 4/4] rust/hw/gpio: Add the first gpio device pcf8574  
+    [RESEND RFC PATCH V3 4/4] rust/hw/gpio: Add the first gpio device pcf8574
     https://yhbt.net/lore/qemu-rust/20251129154321.iSfXzLmwQ-fwfqOPI61ZlM3hBigi55HQjOD_pCGRQN0@z/
