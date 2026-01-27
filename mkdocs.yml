@@ -81,8 +81,10 @@ theme:
     - header.autohide
 extra_css:
   - plugins/stylesheets/extra.css
+  - plugins/stylesheets/ppt-slides.css
 extra_javascript:
   - plugins/javascripts/toc-collapse.js
+  - plugins/javascripts/ppt-slides.js
 
 nav:
   - 主页: index.md

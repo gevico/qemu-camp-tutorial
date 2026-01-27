@@ -1,0 +1,99 @@
+.ppt-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6em;
+    height: 1.6em;
+    margin-right: 0.4em;
+    padding: 0;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.3em;
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    cursor: pointer;
+    vertical-align: text-bottom;
+}
+
+.ppt-toggle svg {
+    width: 1em;
+    height: 1em;
+}
+
+.ppt-toggle[aria-pressed="true"] {
+    border-color: var(--md-primary-fg-color);
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.ppt-deck {
+    display: none;
+    margin: 1.5rem 0 0;
+}
+
+.ppt-slide {
+    display: none;
+    min-height: 70vh;
+    padding: 2rem 2.5rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-default-bg-color);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ppt-slide.is-active {
+    display: block;
+}
+
+.ppt-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ppt-slide pre {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.ppt-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.ppt-btn {
+    border: 0;
+    border-radius: 0.3rem;
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
+.ppt-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ppt-counter {
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
+}
+
+body[data-ppt-mode="slides"] .md-sidebar--primary,
+body[data-ppt-mode="slides"] .md-sidebar--secondary {
+    display: none;
+}
+
+body[data-ppt-mode="slides"] .md-content {
+    max-width: 100%;
+}
+
+body[data-ppt-mode="slides"] article.md-content__inner > :not(h1):not(.ppt-deck) {
+    display: none;
+}
+
+body[data-ppt-mode="slides"] .ppt-deck {
+    display: block;
+}
