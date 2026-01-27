@@ -3,6 +3,11 @@
 
     var SLIDE_MODE_ATTR = "data-ppt-mode";
     var SLIDE_MODE_VALUE = "slides";
+    var RESIZE_DEBOUNCE_MS = 150;
+    var DRAW_COLOR = "#e53935";
+    var DRAW_WIDTH = 3;
+    var ERASER_WIDTH = 16;
+    var HISTORY_LIMIT = 50;
 
     function findArticle(root) {
         if (!root || !root.querySelector) {
@@ -21,10 +26,30 @@
         return button;
     }
 
+    function getViewportHeight() {
+        var header = document.querySelector(".md-header");
+        var headerHeight = header ? header.offsetHeight : 0;
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+        var padding = 24;
+        return Math.max(360, viewportHeight - headerHeight - padding);
+    }
+
+    function scheduleFrame(callback) {
+        if (typeof window.requestAnimationFrame === "function") {
+            window.requestAnimationFrame(callback);
+            return;
+        }
+        window.setTimeout(callback, 16);
+    }
+
     function sanitizeClone(node) {
         var withId = node.querySelectorAll("[id]");
         withId.forEach(function (item) {
             item.removeAttribute("id");
+        });
+        var toggleButtons = node.querySelectorAll(".ppt-toggle");
+        toggleButtons.forEach(function (item) {
+            item.remove();
         });
         var headerLinks = node.querySelectorAll(".headerlink");
         headerLinks.forEach(function (item) {
@@ -50,7 +75,6 @@
         var slides = [];
         var currentSlide = null;
         var foundSection = false;
-        var beforeFirstSection = true;
 
         elements.forEach(function (node) {
             if (node.nodeType !== 1) {
@@ -61,11 +85,12 @@
             }
 
             var tag = node.tagName.toLowerCase();
-            if (tag === "h2") {
-                foundSection = true;
-                if (beforeFirstSection) {
-                    slides.push(titleSlide);
-                    beforeFirstSection = false;
+            if (tag === "h2" || tag === "h3") {
+                if (!foundSection) {
+                    if (titleSlide.children.length > 0) {
+                        slides.push(titleSlide);
+                    }
+                    foundSection = true;
                 }
                 currentSlide = document.createElement("section");
                 currentSlide.className = "ppt-slide";
@@ -74,7 +99,7 @@
                 return;
             }
 
-            if (beforeFirstSection) {
+            if (!foundSection) {
                 titleSlide.appendChild(cloneForSlide(node));
                 return;
             }
@@ -86,8 +111,6 @@
 
         if (!foundSection) {
             slides = [titleSlide];
-        } else if (beforeFirstSection) {
-            slides.push(titleSlide);
         }
 
         return slides;
@@ -103,9 +126,68 @@
         deck.className = "ppt-deck";
         deck.setAttribute("aria-hidden", "true");
 
+        var slidesContainer = document.createElement("div");
+        slidesContainer.className = "ppt-slides";
         slides.forEach(function (slide) {
-            deck.appendChild(slide);
+            slidesContainer.appendChild(slide);
         });
+        deck.appendChild(slidesContainer);
+
+        var tools = document.createElement("div");
+        tools.className = "ppt-tools";
+
+        var pointerBtn = document.createElement("button");
+        pointerBtn.type = "button";
+        pointerBtn.className = "ppt-tool is-active";
+        pointerBtn.setAttribute("aria-label", "Pointer mode");
+        pointerBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l7 17 2-6 6 2z" fill="currentColor"></path></svg><span>Pointer</span>';
+
+        var drawBtn = document.createElement("button");
+        drawBtn.type = "button";
+        drawBtn.className = "ppt-tool";
+        drawBtn.setAttribute("aria-label", "Draw mode");
+        drawBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5V20h2.5l9.86-9.86-2.5-2.5L4 17.5zm14.85-8.35a.996.996 0 0 0 0-1.41l-2.59-2.59a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0z" fill="currentColor"></path></svg><span>Draw</span>';
+
+        var eraseBtn = document.createElement("button");
+        eraseBtn.type = "button";
+        eraseBtn.className = "ppt-tool";
+        eraseBtn.setAttribute("aria-label", "Erase mode");
+        eraseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3l5 5-9.5 9.5H6L3 14.5 16 3zm-9.5 13.5h4.17L19 8.17 15.83 5 6.5 14.33 5 12.83 16 1.83l7.17 7.17L12.17 20H6l-3-3 2.5-2.5z" fill="currentColor"></path></svg><span>Erase</span>';
+
+        var undoBtn = document.createElement("button");
+        undoBtn.type = "button";
+        undoBtn.className = "ppt-tool";
+        undoBtn.setAttribute("aria-label", "Undo");
+        undoBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7V4L2 9l5 5v-3h7a4 4 0 1 1 0 8h-2v2h2a6 6 0 0 0 0-12H7z" fill="currentColor"></path></svg><span>Undo</span>';
+
+        var redoBtn = document.createElement("button");
+        redoBtn.type = "button";
+        redoBtn.className = "ppt-tool";
+        redoBtn.setAttribute("aria-label", "Redo");
+        redoBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h-7a6 6 0 0 0 0 12h2v-2h-2a4 4 0 0 1 0-8h7v3l5-5-5-5v3z" fill="currentColor"></path></svg><span>Redo</span>';
+
+        var clearBtn = document.createElement("button");
+        clearBtn.type = "button";
+        clearBtn.className = "ppt-tool";
+        clearBtn.setAttribute("aria-label", "Clear drawing");
+        clearBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l1 2h3v2H3V6h3l1-2zm2 6h2v8H9v-8zm4 0h2v8h-2v-8z" fill="currentColor"></path></svg><span>Clear</span>';
+
+        var overlay = document.createElement("div");
+        overlay.className = "ppt-overlay";
+
+        var canvas = document.createElement("canvas");
+        canvas.className = "ppt-canvas";
+        canvas.setAttribute("aria-hidden", "true");
+
+        tools.appendChild(pointerBtn);
+        tools.appendChild(drawBtn);
+        tools.appendChild(eraseBtn);
+        tools.appendChild(undoBtn);
+        tools.appendChild(redoBtn);
+        tools.appendChild(clearBtn);
+        overlay.appendChild(canvas);
+        deck.appendChild(overlay);
+        deck.appendChild(tools);
 
         var controls = document.createElement("div");
         controls.className = "ppt-controls";
@@ -130,11 +212,244 @@
 
         return {
             deck: deck,
+            slidesContainer: slidesContainer,
             slides: slides,
+            overlay: overlay,
+            canvas: canvas,
+            pointerBtn: pointerBtn,
+            drawBtn: drawBtn,
+            eraseBtn: eraseBtn,
+            undoBtn: undoBtn,
+            redoBtn: redoBtn,
+            clearBtn: clearBtn,
             prev: prev,
             next: next,
             counter: counter
         };
+    }
+
+    function updateSlideHeight(state) {
+        var height = getViewportHeight();
+        state.slideHeight = height;
+        state.deckInfo.deck.style.setProperty("--ppt-slide-height", height + "px");
+    }
+
+    function resizeCanvas(state) {
+        var rect = state.deckInfo.deck.getBoundingClientRect();
+        if (rect.width === 0 || rect.height === 0) {
+            return;
+        }
+        var ratio = window.devicePixelRatio || 1;
+        var snapshot = null;
+        if (state.ctx) {
+            snapshot = state.canvas.toDataURL();
+        }
+        state.canvas.width = Math.round(rect.width * ratio);
+        state.canvas.height = Math.round(rect.height * ratio);
+        state.canvas.style.width = rect.width + "px";
+        state.canvas.style.height = rect.height + "px";
+        state.ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        state.ctx.lineCap = "round";
+        state.ctx.lineJoin = "round";
+        applyTool(state);
+        if (snapshot) {
+            var img = new Image();
+            img.onload = function () {
+                state.ctx.drawImage(img, 0, 0, rect.width, rect.height);
+            };
+            img.src = snapshot;
+        }
+    }
+
+    function setToolActive(state, tool) {
+        state.tool = tool;
+        state.deckInfo.pointerBtn.classList.toggle("is-active", tool === "pointer");
+        state.deckInfo.drawBtn.classList.toggle("is-active", tool === "draw");
+        state.deckInfo.eraseBtn.classList.toggle("is-active", tool === "erase");
+        var pointerDisabled = tool === "pointer";
+        if (pointerDisabled) {
+            state.isDrawing = false;
+        }
+        state.deckInfo.overlay.style.pointerEvents = pointerDisabled ? "none" : "auto";
+        state.canvas.style.pointerEvents = pointerDisabled ? "none" : "auto";
+    }
+
+    function applyTool(state) {
+        if (!state.ctx) {
+            return;
+        }
+        if (state.tool === "erase") {
+            state.ctx.globalCompositeOperation = "destination-out";
+            state.ctx.strokeStyle = "rgba(0, 0, 0, 1)";
+            state.ctx.lineWidth = ERASER_WIDTH;
+            return;
+        }
+        state.ctx.globalCompositeOperation = "source-over";
+        state.ctx.strokeStyle = DRAW_COLOR;
+        state.ctx.lineWidth = DRAW_WIDTH;
+    }
+
+    function flashButton(state, button) {
+        if (!button) {
+            return;
+        }
+        if (state.clearFlashTimer) {
+            window.clearTimeout(state.clearFlashTimer);
+        }
+        button.classList.remove("is-flash");
+        void button.offsetWidth;
+        button.classList.add("is-flash");
+        state.clearFlashTimer = window.setTimeout(function () {
+            button.classList.remove("is-flash");
+        }, 600);
+    }
+
+    function updateHistoryButtons(state) {
+        state.deckInfo.undoBtn.disabled = state.undoStack.length === 0;
+        state.deckInfo.redoBtn.disabled = state.redoStack.length === 0;
+    }
+
+    function pushHistory(state, snapshot) {
+        state.undoStack.push(snapshot);
+        if (state.undoStack.length > HISTORY_LIMIT) {
+            state.undoStack.shift();
+        }
+        state.redoStack.length = 0;
+        updateHistoryButtons(state);
+    }
+
+    function snapshotCanvas(state) {
+        if (!state.canvas) {
+            return "";
+        }
+        return state.canvas.toDataURL("image/png");
+    }
+
+    function restoreSnapshot(state, snapshot) {
+        if (!snapshot) {
+            state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
+            return;
+        }
+        var rect = state.canvas.getBoundingClientRect();
+        var img = new Image();
+        img.onload = function () {
+            state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
+            state.ctx.drawImage(img, 0, 0, rect.width, rect.height);
+        };
+        img.src = snapshot;
+    }
+
+    function bindDrawing(state) {
+        state.ctx = state.deckInfo.canvas.getContext("2d");
+        state.canvas = state.deckInfo.canvas;
+        state.canvas.style.touchAction = "none";
+        setToolActive(state, "pointer");
+        applyTool(state);
+        updateHistoryButtons(state);
+
+        state.deckInfo.pointerBtn.addEventListener("click", function () {
+            setToolActive(state, "pointer");
+        });
+
+        state.deckInfo.drawBtn.addEventListener("click", function () {
+            setToolActive(state, "draw");
+            applyTool(state);
+        });
+
+        state.deckInfo.eraseBtn.addEventListener("click", function () {
+            setToolActive(state, "erase");
+            applyTool(state);
+        });
+
+        state.deckInfo.undoBtn.addEventListener("click", function () {
+            if (state.undoStack.length === 0) {
+                return;
+            }
+            var current = snapshotCanvas(state);
+            var previous = state.undoStack.pop();
+            state.redoStack.push(current);
+            restoreSnapshot(state, previous);
+            updateHistoryButtons(state);
+            flashButton(state, state.deckInfo.undoBtn);
+        });
+
+        state.deckInfo.redoBtn.addEventListener("click", function () {
+            if (state.redoStack.length === 0) {
+                return;
+            }
+            var current = snapshotCanvas(state);
+            var next = state.redoStack.pop();
+            state.undoStack.push(current);
+            restoreSnapshot(state, next);
+            updateHistoryButtons(state);
+            flashButton(state, state.deckInfo.redoBtn);
+        });
+
+        state.deckInfo.clearBtn.addEventListener("click", function () {
+            pushHistory(state, snapshotCanvas(state));
+            state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height);
+            flashButton(state, state.deckInfo.clearBtn);
+        });
+
+        state.canvas.addEventListener("pointerdown", function (event) {
+            if (!state.enabled) {
+                return;
+            }
+            if (state.tool === "pointer") {
+                return;
+            }
+            state.strokeSnapshot = snapshotCanvas(state);
+            state.isDrawing = true;
+            applyTool(state);
+            var rect = state.canvas.getBoundingClientRect();
+            var x = event.clientX - rect.left;
+            var y = event.clientY - rect.top;
+            state.ctx.beginPath();
+            state.ctx.moveTo(x, y);
+            if (state.canvas.setPointerCapture) {
+                state.canvas.setPointerCapture(event.pointerId);
+            }
+            event.preventDefault();
+        });
+
+        state.canvas.addEventListener("pointermove", function (event) {
+            if (!state.enabled || !state.isDrawing || state.tool === "pointer") {
+                return;
+            }
+            var rect = state.canvas.getBoundingClientRect();
+            var x = event.clientX - rect.left;
+            var y = event.clientY - rect.top;
+            state.ctx.lineTo(x, y);
+            state.ctx.stroke();
+            event.preventDefault();
+        });
+
+        state.canvas.addEventListener("pointerup", function (event) {
+            if (!state.isDrawing) {
+                return;
+            }
+            state.isDrawing = false;
+            state.ctx.closePath();
+            pushHistory(state, state.strokeSnapshot || snapshotCanvas(state));
+            state.strokeSnapshot = null;
+            if (state.canvas.releasePointerCapture) {
+                state.canvas.releasePointerCapture(event.pointerId);
+            }
+            event.preventDefault();
+        });
+
+        state.canvas.addEventListener("pointercancel", function () {
+            state.isDrawing = false;
+        });
+    }
+
+    function rebuildSlides(state) {
+        var slides = buildSlides(state.article);
+        state.deckInfo.slidesContainer.innerHTML = "";
+        slides.forEach(function (slide) {
+            state.deckInfo.slidesContainer.appendChild(slide);
+        });
+        state.deckInfo.slides = slides;
     }
 
     function setActiveSlide(state, index) {
@@ -146,20 +461,34 @@
         slides.forEach(function (slide, idx) {
             if (idx === clamped) {
                 slide.classList.add("is-active");
+                slide.setAttribute("aria-hidden", "false");
             } else {
                 slide.classList.remove("is-active");
+                slide.setAttribute("aria-hidden", "true");
             }
         });
         state.activeIndex = clamped;
         state.deckInfo.counter.textContent = String(clamped + 1) + " / " + String(slides.length);
         state.deckInfo.prev.disabled = clamped === 0;
         state.deckInfo.next.disabled = clamped === slides.length - 1;
+        if (state.enabled && state.tool !== "pointer") {
+            setToolActive(state, "pointer");
+        }
+    }
+
+    function prepareSlides(state) {
+        updateSlideHeight(state);
+        rebuildSlides(state);
+        scheduleFrame(function () {
+            resizeCanvas(state);
+        });
     }
 
     function setMode(state, enabled) {
         state.enabled = enabled;
         if (enabled) {
             document.body.setAttribute(SLIDE_MODE_ATTR, SLIDE_MODE_VALUE);
+            prepareSlides(state);
             state.deckInfo.deck.setAttribute("aria-hidden", "false");
             setActiveSlide(state, state.activeIndex || 0);
         } else {
@@ -201,6 +530,25 @@
         });
     }
 
+    function bindResize(state) {
+        if (state.resizeBound) {
+            return;
+        }
+        state.resizeBound = true;
+        var timer = null;
+        window.addEventListener("resize", function () {
+            if (!state.enabled) {
+                return;
+            }
+            if (timer) {
+                window.clearTimeout(timer);
+            }
+            timer = window.setTimeout(function () {
+                updateSlideHeight(state);
+            }, RESIZE_DEBOUNCE_MS);
+        });
+    }
+
     function init(root) {
         var article = findArticle(root);
         if (!article || article.dataset.pptInit === "true") {
@@ -227,9 +575,20 @@
 
         var state = {
             deckInfo: deckInfo,
+            article: article,
             toggle: toggle,
             activeIndex: 0,
-            enabled: false
+            enabled: false,
+            slideHeight: 0,
+            tool: "pointer",
+            isDrawing: false,
+            canvas: null,
+            ctx: null,
+            resizeBound: false,
+            clearFlashTimer: null,
+            strokeSnapshot: null,
+            undoStack: [],
+            redoStack: []
         };
 
         window.__pptState = state;
@@ -254,6 +613,8 @@
 
         setMode(state, false);
         bindKeyboard();
+        bindResize(state);
+        bindDrawing(state);
     }
 
     if (window.document$ && typeof window.document$.subscribe === "function") {
