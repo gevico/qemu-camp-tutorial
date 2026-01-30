@@ -4,11 +4,68 @@ article p {
   text-justify: inter-word;
 }
 
-/* TOC collapse: show two levels by default */
-.md-sidebar--secondary [data-md-component="toc"] li[data-toc-level]:not([data-toc-level="1"]) > nav {
+/* TOC collapse: only H2 groups (toc level 1) are collapsible */
+.md-sidebar--secondary [data-md-component="toc"] li[data-toc-level="1"] > nav {
   display: none;
 }
 
-.md-sidebar--secondary [data-md-component="toc"] li[data-toc-expanded="true"] > nav {
+.md-sidebar--secondary [data-md-component="toc"] li[data-toc-level="1"][data-toc-expanded="true"] > nav {
   display: block;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] li[data-toc-level="1"][data-toc-user="collapsed"] > nav {
+  display: none;
+}
+
+/* TOC: collapsible toggles (right sidebar) */
+.md-sidebar--secondary [data-md-component="toc"] li.md-nav__item {
+  position: relative;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] li.md-nav__item > button.md-toc__toggle + a.md-nav__link {
+  padding-right: 1.8rem;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] button.md-toc__toggle {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] button.md-toc__toggle:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] button.md-toc__toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] button.md-toc__toggle::before {
+  content: "";
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: currentColor;
+  -webkit-mask-image: var(--md-nav-icon--next);
+  mask-image: var(--md-nav-icon--next);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: transform 150ms ease-in-out;
+}
+
+.md-sidebar--secondary [data-md-component="toc"] li.md-nav__item[data-toc-expanded="true"] > button.md-toc__toggle::before {
+  transform: rotate(90deg);
 }
