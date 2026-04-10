@@ -23,6 +23,8 @@ qemu-system-riscv64 -M virt -s -S -nographic
 
 所以本小节，讲述的是一个方法论，让你快速分析不同的 Machine，或者对于本训练营没有覆盖到知识点，你也有足够的手段去研究它。
 
+为了把这个方法讲得更具体一些，下面我们先抓住一条主线：从 virt Machine 的初始化开始，一路追踪到固件加载和 vCPU 启动。先把这一条线走通，再回头看其他 Machine 或其他子系统时，思路就会顺很多。
+
 !!! tip "概览"
 
     - 从 main 入口追踪 QEMU 启动主流程
@@ -30,6 +32,10 @@ qemu-system-riscv64 -M virt -s -S -nographic
     - 加载 OpenSBI 与客户机程序到内存
     - vCPU 第一条指令的启动路径
     - 主循环与 IO 线程的职责划分
+
+!!! tip "阅读提示"
+
+    如果你对 `vCPU`、`QOM`、`gdbstub` 这类概念还不熟，不必卡在这里；建议先自行询问 AI，快速补齐这些术语的基本含义，再回到这里继续顺着源码往下看。
 
 ## virt Machine 初始化
 
