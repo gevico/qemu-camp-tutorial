@@ -2,7 +2,7 @@
 
 !!! note "主要贡献者"
 
-    - 作者：[@zevorn](https://github.com/zevorn)
+    - 作者：[@zevorn](https://github.com/zevorn) [@Plucky923](https://github.com/Plucky923)
 
 对一个软件源码建立最直观印象的方法，就是观测它的初始化流程。QEMU 是一个 C 为主体的项目，所以理所当然我们要从 main 函数开始追踪。
 
