@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn) [@Plucky923](https://github.com/Plucky923)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 QEMU 支持多种 accel，但大体可以分为两种：指令模拟技术（TCG）、虚拟化技术（KVM、HVF）等。QEMU 有两种主要的运行模式：System mode 模拟整个机器（CPU、内存和虚拟设备）以运行客户机操作系统；User mode 则允许在一个 CPU 架构上运行为另一个 CPU 编译的用户态进程，此时 CPU 始终被模拟，主要支持 Linux 用户态程序。
 
 !!! tip "概览"

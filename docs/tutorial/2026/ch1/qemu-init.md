@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn) [@Plucky923](https://github.com/Plucky923)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 对一个软件源码建立最直观印象的方法，就是观测它的初始化流程。QEMU 是一个 C 为主体的项目，所以理所当然我们要从 main 函数开始追踪。
 
 以 qemu-system-riscv64 为例，我们使用如下命令启动：

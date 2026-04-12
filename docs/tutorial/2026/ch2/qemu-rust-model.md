@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-Rust for QEMU 的目标是让 Rust 设备与现有 C 基础设施协同工作。本文聚焦“如何用 Rust 建模外设”，并以 I2C 设备与 GPIO 设备（PCF8574）作为示例，说明从构建接入到设备行为实现的完整链路，同时补充 SysBus 的 Rust 封装要点。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+Rust for QEMU 的目标是让 Rust 设备与现有 C 基础设施协同工作。本文聚焦”如何用 Rust 建模外设”，并以 I2C 设备与 GPIO 设备（PCF8574）作为示例，说明从构建接入到设备行为实现的完整链路，同时补充 SysBus 的 Rust 封装要点。
 
 !!! tip "概览"
 

@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-GPGPU（General-Purpose GPU）把 GPU 从“图形渲染器”变成“通用并行计算器”。它靠大量并行线程隐
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+GPGPU（General-Purpose GPU）把 GPU 从”图形渲染器”变成”通用并行计算器”。它靠大量并行线程隐
 藏内存延迟，用吞吐量换取响应时间，是与 CPU 完全不同的设计哲学。
 
 本文的目的在于提供一个理解 GPGPU 的全局视角与知识背景，但重心是关注如何在 QEMU 上集成或建模

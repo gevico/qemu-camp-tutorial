@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-GPGPU 的“算子”通常对应 GPU 端的 kernel。本文从 kernel 下发与执行的通用流程切入，再结合 QEMU 的 system mode 解释如何模拟 Guest OS、PCIe 设备与 GPGPU 模型，最后给出“算子下发执行”的可实现路径。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+GPGPU 的”算子”通常对应 GPU 端的 kernel。本文从 kernel 下发与执行的通用流程切入，再结合 QEMU 的 system mode 解释如何模拟 Guest OS、PCIe 设备与 GPGPU 模型，最后给出“算子下发执行”的可实现路径。
 
 !!! tip "概览"
 

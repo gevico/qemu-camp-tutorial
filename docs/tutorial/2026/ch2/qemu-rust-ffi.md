@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-Rust for QEMU 的核心目标不是“重写 QEMU”，而是让 Rust 设备与现有 C 基础设施协同工作。FFI（Foreign Function Interface）就是这套协同机制的中枢：它既要把 C API 暴露给 Rust，也要把 Rust 设备注册为 QOM 对象、回调与设备入口函数。本文基于将梳理 Rust FFI 在 QEMU 上的实现路径与关键机制。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+Rust for QEMU 的核心目标不是”重写 QEMU”，而是让 Rust 设备与现有 C 基础设施协同工作。FFI（Foreign Function Interface）就是这套协同机制的中枢：它既要把 C API 暴露给 Rust，也要把 Rust 设备注册为 QOM 对象、回调与设备入口函数。本文基于将梳理 Rust FFI 在 QEMU 上的实现路径与关键机制。
 
 !!! tip "概览"
 

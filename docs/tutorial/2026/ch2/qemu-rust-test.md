@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 本文介绍如何基于 Rust for QEMU 框架编写单元测试。重点是测试入口、写法模式、绑定生成依赖，以及设备代码的可测性拆分策略。
 
 !!! tip "概览"

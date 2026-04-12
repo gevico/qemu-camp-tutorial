@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 PCIe 是现代系统里最常见的外设互连总线之一。QEMU 在系统模式下会完整模拟 PCIe 拓扑、配置空间、BAR 映射、中断以及扩展能力，这让我们可以用纯软件复现“发现设备—配置资源—运行驱动”的真实流程。
 
 本文给出一个通俗的全局视角：PCIe 在 QEMU 中被拆成哪些层次？配置空间如何读写？BAR 如何映射？以及如何基于这些机制建模一个 PCIe 设备。

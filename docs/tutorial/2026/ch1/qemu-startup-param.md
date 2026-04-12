@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 QEMU 是一款功能强大的开源虚拟化和仿真软件，支持多种处理器架构（x86、ARM、RISC-V、MIPS、Loongarch 等）。通过 QEMU，开发者可以在不同的硬件平台上测试操作系统、运行应用程序、进行内核开发和调试。
 
 本章节将聚焦 QEMU 常用启动参数，以启动 OpenEuler RISC-V 系统为实例，重点讲解主板选型、CPU 配置、设备添加等核心操作，进而介绍如何精准查找适配自身需求的 QEMU 启动参数，抛砖引玉助力读者掌握相关应用方法。

@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 本文以 QEMU system mode + TCG 为背景，梳理“模拟 CPU 的中断/异常”处理链路。我们关注两个问题：中断/异常如何进入 CPU 执行循环？架构相关的处理逻辑在哪里落地？
 
 一句话总结：**QEMU 会在 TB 边界检查中断和异常，并把真正的处理交给目标架构的回调**。

@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 我们以 PL011 串口为例，说明 QEMU 外设建模的主要方法。选择 PL011 作为讲解对象的原因是，这个设备同样实现了 Rust 版本，方便大家学习，同时，PL011 也是我们专业阶段实验 G233 主板所使用的串口设备。
 
 PL011 的实现位于 `hw/char/pl011.c`，状态定义在 `include/hw/char/pl011.h`。它是一个典型的 SysBus 设备：通过 QOM 注册类型、用状态结构描述寄存器与 FIFO、用 MMIO 回调响应访问、并通过 IRQ 线连接到平台中断控制器（如 GIC）。

@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-QEMU 在系统模式下模拟“多核 CPU”时，核心思想是：**把每个逻辑 CPU 抽象成一个 vCPU，并为其建立执行上下文与线程模型**。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+QEMU 在系统模式下模拟”多核 CPU”时，核心思想是：**把每个逻辑 CPU 抽象成一个 vCPU，并为其建立执行上下文与线程模型**。
 
 !!! tip "概览"
 

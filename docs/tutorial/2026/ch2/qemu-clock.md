@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-QEMU 的“时钟系统”包含两套相关但不同的机制：一套是驱动定时器与主循环的 **QEMUClock/QEMUTimer**，另一套是建模硬件时钟树的 **Clock QOM 对象**。理解它们的职责边界，是写出稳定设备模型和掌握时间推进逻辑的关键。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+QEMU 的”时钟系统”包含两套相关但不同的机制：一套是驱动定时器与主循环的 **QEMUClock/QEMUTimer**，另一套是建模硬件时钟树的 **Clock QOM 对象**。理解它们的职责边界，是写出稳定设备模型和掌握时间推进逻辑的关键。
 
 一句话总结：**QEMUClock 决定“时间怎么走”，Clock 决定“频率怎么分发”。**
 

@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn) [@Plucky923](https://github.com/Plucky923)
 
+!!! info “QEMU 版本”
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 在 QEMU 中理解或新增一个 RISC-V CPU 型号，最好不要把注意力只放在某一个文件上。按照源码实现，主要涉及下面 4 个内容：
 
 - QOM 类型系统：CPU 作为什么类型注册到 QEMU 对象模型中。
@@ -15,7 +19,7 @@ RISC-V 这套实现的核心结构有四个：
 
 - `RISCVCPU`：具体 CPU 实例，对应一个 hart。
 - `RISCVCPUClass`：CPU 类型对应的类对象，其中保存着该型号的默认定义。
-- `RISCVCPUDef`：某个 CPU 型号的默认“蓝图”。
+- `RISCVCPUDef`：某个 CPU 型号的默认”蓝图”。
 - `RISCVCPUConfig`：扩展开关和数值型配置项，最终保存在 CPU 实例里。
 
 !!! tip "概览"

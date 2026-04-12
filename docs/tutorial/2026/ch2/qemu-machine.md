@@ -4,7 +4,11 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
-QEMU 里的“主板”对应 machine model（机型）。它不是一颗 CPU，也不是单个外设，而是**把 CPU 拓扑、内存布局、总线、外设、中断路由、固件入口**统一编排起来的一层“板级模型”。
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
+QEMU 里的”主板”对应 machine model（机型）。它不是一颗 CPU，也不是单个外设，而是**把 CPU 拓扑、内存布局、总线、外设、中断路由、固件入口**统一编排起来的一层“板级模型”。
 
 !!! tip "概览"
 

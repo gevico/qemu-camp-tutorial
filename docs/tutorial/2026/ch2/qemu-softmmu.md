@@ -4,6 +4,10 @@
 
     - 作者：[@zevorn](https://github.com/zevorn)
 
+!!! info "QEMU 版本"
+
+    本文基于 QEMU **v10.2.0**（tag: [`v10.2.0`](https://gitlab.com/qemu-project/qemu/-/tags/v10.2.0)，commit: `75eb8d57c6b9`）。
+
 QEMU 的系统模式（system mode）需要完整模拟一台计算机——包括 CPU、内存和外设。在真实硬件上，CPU 通过 MMU（Memory Management Unit）和 TLB（Translation Lookaside Buffer）完成虚拟地址到物理地址的翻译，然后由物理地址决定这次访问落到 DRAM 还是某个外设的寄存器上。QEMU 要在纯软件层面复现这套机制，这就是 SoftMMU 存在的理由——soft 意味着"用软件实现"，而非依赖宿主机的硬件 MMU。
 
 与之对应的 user mode 不需要操心这些：它只模拟用户态指令，客户机进程的内存直接通过 `mmap()` 映射到宿主机地址空间，地址翻译交给宿主机的 OS 和硬件 MMU 处理。两种模式在内存管理上的差异，本质上就是"要不要自己实现 MMU"这一个问题。
