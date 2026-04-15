@@ -83,7 +83,7 @@ git push origin main
 本地运行全部测题的方式：
 
 ```bash
-make check-gevico-qtest
+make -f Makefile.camp test-soc
 ```
 
 SoC 方向全部测题通过的情况下，你会看到如下输出：
