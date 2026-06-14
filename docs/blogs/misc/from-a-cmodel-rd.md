@@ -132,7 +132,7 @@ dispatch 表的填充通过 YAML spec → Python 生成器 → `INSTRUCTION_LIST
         float r = x - k * 0.69314718f;                       // r ∈ [-ln2/2, ln2/2]
         float r2 = r * r;
         float er = 1.0f + r + r2/2.0f + r2*r/6.0f + r2*r2/24.0f + r2*r2*r/120.0f;
-        return er * (1 << (int)k);  // e^x = 2^k * e^r
+        return ldexpf(er, (int)k);   // e^x = er * 2^k
     }
     ```
 
@@ -194,15 +194,15 @@ YAML spec 中每条指令的 decode 信息驱动了整个流程：
 ```yaml
 # inst/rvv/scripts/rvv_spec.yaml
 - name: vadd
-  op: “+”
+  op: "+"
   itype: int
   decode:
-    label: “op_vadd_vv”          # → DISP_VADD_VV 枚举值
-    pattern: “000000? ????? ????? 000 ????? 10101 11”
+    label: "op_vadd_vv"          # → DISP_VADD_VV 枚举值
+    pattern: "000000? ????? ????? 000 ????? 10101 11"
     type: TYPE_R
     imm: imm0
     variants:                    # SEW 变体 → dispatch_rebind.h
-      base: “vadd_vv”
+      base: "vadd_vv"
       sew: [8, 16, 32]
 ```
 
