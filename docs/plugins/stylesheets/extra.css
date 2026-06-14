@@ -1,8 +1,9 @@
-/* 全局段落两端对齐 */
+/* 全局段落两端对齐（已禁用，如需恢复取消注释）
 article p {
   text-align: justify;
   text-justify: inter-word;
 }
+*/
 
 /* TOC collapse: only H2 groups (toc level 1) are collapsible */
 .md-sidebar--secondary [data-md-component="toc"] li[data-toc-level="1"] > nav {
