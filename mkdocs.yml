@@ -85,6 +85,8 @@ extra_css:
 extra_javascript:
   - plugins/javascripts/toc-collapse.js
   - plugins/javascripts/ppt-slides.js
+  - plugins/javascripts/mathjax-config.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - 主页: index.md
@@ -237,6 +239,7 @@ nav:
     - 训练营 2025:
       - 专业阶段总结 LordaeronESZ: blogs/2025/qemu-camp-2025-LordaeronESZ.md
     - 其他技术博客:
+      - 从 cmodel 说开来 - rd: blogs/misc/from-a-cmodel-rd.md
       - 参与 QEMU 邮件列表讨论: blogs/misc/qemu-devel-email.md
       - 一键 QEMU 云原生开发: blogs/misc/qemu-cnb-dev.md
       - 虚拟机软件中的解释技术: blogs/misc/simulater-interp.md
