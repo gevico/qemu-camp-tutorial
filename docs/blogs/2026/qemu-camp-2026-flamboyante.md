@@ -20,18 +20,19 @@
 
 ### G233 board 的接入
 
-G233 的最外层是 machine。它描述的是“这块虚拟板子长什么样”：DRAM 从哪里开始，UART、virtio、PLIC/CLINT 放在哪里，自定义外设占用哪些 MMIO 地址，以及这些外设的 IRQ 分别接到哪根 PLIC source。
+G233 的最外层是 machine。它描述的是“这块虚拟板子长什么样”：DRAM 从哪里开始，UART、virtio、PLIC/ACLINT 放在哪里，自定义外设占用哪些 MMIO 地址，以及这些外设的 IRQ 分别接到哪根 PLIC source。
 
-G233 在 `hw/riscv/g233.c` 中定义了自己的地址空间布局。对 SoC 建模来说，这一步很关键，因为后面 guest 看到的就是这些物理地址：
+G233 需要先把地址空间布局定下来。对 SoC 建模来说，这一步很关键，因为后面 guest 看到的就是这些物理地址。按 datasheet 的描述，几个主要 MMIO 设备窗口大致如下：
 
-```c
-[VIRT_UART0] = { 0x10000000, 0x100 },
-[VIRT_WDT]   = { 0x10010000, 0x100 },
-[VIRT_GPIO]  = { 0x10012000, 0x100 },
-[VIRT_PWM]   = { 0x10015000, 0x100 },
-[VIRT_SPI]   = { 0x10018000, 0x100 },
-[VIRT_DRAM]  = { 0x80000000, 0x0 },
-```
+| 设备 | 基地址 | 窗口大小 |
+| --- | --- | --- |
+| PL011 UART | `0x1000_0000` | 4 KiB |
+| WDT | `0x1001_0000` | 4 KiB |
+| GPIO | `0x1001_2000` | 256 B |
+| PWM | `0x1001_5000` | 4 KiB |
+| SPI | `0x1001_8000` | 4 KiB |
+
+这里写出来的不是为了复刻完整地址表，而是强调一点：board 侧要先把 CPU 看到的物理地址窗口固定下来，后面的 MMIO 访问才有落点。
 
 外设接入 board 的流程比较固定。以 G233 自定义外设为例，board 侧负责创建设备、realize、映射 MMIO，并把设备 IRQ 输出接到 PLIC：
 
@@ -99,7 +100,7 @@ elapsed_ticks = (now - last_update_ns) * PWM_FREQ / NANOSECONDS_PER_SECOND
 
 ### WDT：ptimer、喂狗与超时中断
 
-WDT 这部分主要练的是 QEMU 里的 `ptimer`。WDT 有 `CTRL/LOAD/VAL/KEY/SR` 这些寄存器：`CTRL` 控制使能和中断使能，`LOAD` 设置计数初值，`VAL` 返回当前计数，`KEY` 用于喂狗或锁定，`SR` 保存 timeout 状态。
+WDT 这部分主要练的是 QEMU 里的 `ptimer`。WDT 有 `CTRL/LOAD/VAL/SR/KEY` 这些寄存器：`CTRL` 控制使能、中断/复位使能和锁定状态，`LOAD` 设置计数初值，`VAL` 返回当前计数，`SR` 保存 timeout 状态，`KEY` 用于喂狗或锁定。
 
 和 PWM 不同，WDT 更像一个持续递减的硬件计数器，所以这里用 `ptimer` 表达倒计时会更顺手。启动或喂狗时，模型会 stop timer、重新设置 count，如果 enable 位打开则重新运行：
 
