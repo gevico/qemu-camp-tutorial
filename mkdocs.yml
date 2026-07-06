@@ -48,7 +48,7 @@ theme:
   language: zh
   logo: image/Qemu-logo.png
   font:
-    text: Inter
+    text: JetBrains Mono
     code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"

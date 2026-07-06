@@ -1,3 +1,9 @@
+/* Use a monospace font across the tutorial site. */
+:root {
+  --md-text-font: "JetBrains Mono";
+  --md-code-font: "JetBrains Mono";
+}
+
 /* 全局段落两端对齐（已禁用，如需恢复取消注释）
 article p {
   text-align: justify;
