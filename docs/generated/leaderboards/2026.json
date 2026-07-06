@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-05T14:05:20Z"
+    "generated_at": "2026-07-06T08:55:46Z"
   },
   "directions": [
     {
@@ -61,26 +61,6 @@
       "stage": "basic",
       "direction": "basic-c",
       "rank": 2,
-      "github_id": "Codeman-1999",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-08T04:47:46Z",
-      "completion_time": "2026-04-08T04:48:35Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 3,
-      "github_id": "fbt1709",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-08T06:24:23Z",
-      "completion_time": "2026-04-08T06:25:11Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 4,
       "github_id": "ihanzh",
       "score": 200.0,
       "total_score": 200.0,
@@ -90,7 +70,17 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 5,
+      "rank": 3,
+      "github_id": "bbbbbq",
+      "score": 200.0,
+      "total_score": 200.0,
+      "run_time": "2026-04-08T15:40:05Z",
+      "completion_time": "2026-04-08T15:41:42Z"
+    },
+    {
+      "stage": "basic",
+      "direction": "basic-c",
+      "rank": 4,
       "github_id": "nusakom",
       "score": 200.0,
       "total_score": 200.0,
@@ -100,7 +90,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 6,
+      "rank": 5,
       "github_id": "srcres258",
       "score": 200.0,
       "total_score": 200.0,
@@ -110,7 +100,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 7,
+      "rank": 6,
       "github_id": "seehello",
       "score": 200.0,
       "total_score": 200.0,
@@ -120,17 +110,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 8,
-      "github_id": "shangguanyongshi",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-15T00:45:28Z",
-      "completion_time": "2026-04-15T00:46:08Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 9,
+      "rank": 7,
       "github_id": "flamboyante",
       "score": 200.0,
       "total_score": 200.0,
@@ -140,7 +120,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 10,
+      "rank": 8,
       "github_id": "LiuHongsGitHub",
       "score": 200.0,
       "total_score": 200.0,
@@ -150,47 +130,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 11,
-      "github_id": "Aozaki-aok0",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-16T15:09:28Z",
-      "completion_time": "2026-04-16T15:10:14Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 12,
-      "github_id": "clsfantasy",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-17T07:52:04Z",
-      "completion_time": "2026-04-17T07:52:47Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 13,
-      "github_id": "Sutter099",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-17T10:40:02Z",
-      "completion_time": "2026-04-17T10:40:50Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 14,
-      "github_id": "vsvnakers",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-17T19:41:34Z",
-      "completion_time": "2026-04-17T19:42:15Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 15,
+      "rank": 9,
       "github_id": "GrexLoong",
       "score": 200.0,
       "total_score": 200.0,
@@ -200,7 +140,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 16,
+      "rank": 10,
       "github_id": "trace1729",
       "score": 200.0,
       "total_score": 200.0,
@@ -210,7 +150,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 17,
+      "rank": 11,
       "github_id": "RainLeaf16",
       "score": 200.0,
       "total_score": 200.0,
@@ -220,17 +160,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 18,
-      "github_id": "primercoder",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-27T00:27:57Z",
-      "completion_time": "2026-04-27T00:28:56Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 19,
+      "rank": 12,
       "github_id": "littlewangzai-orz",
       "score": 200.0,
       "total_score": 200.0,
@@ -240,37 +170,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 20,
-      "github_id": "asdfgh870",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-30T14:33:22Z",
-      "completion_time": "2026-04-30T14:34:35Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 21,
-      "github_id": "lingqian-gi",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-02T12:52:25Z",
-      "completion_time": "2026-05-02T12:53:21Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 22,
-      "github_id": "eternal-echo",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-03T08:00:49Z",
-      "completion_time": "2026-05-03T08:01:47Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 23,
+      "rank": 13,
       "github_id": "helloyuze",
       "score": 200.0,
       "total_score": 200.0,
@@ -280,7 +180,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 24,
+      "rank": 14,
       "github_id": "First-da",
       "score": 200.0,
       "total_score": 200.0,
@@ -290,27 +190,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 25,
-      "github_id": "xiaoerlang0359-debug",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-10T13:10:56Z",
-      "completion_time": "2026-05-10T13:12:04Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 26,
-      "github_id": "73fc",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-10T14:20:24Z",
-      "completion_time": "2026-05-10T14:21:19Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 27,
+      "rank": 15,
       "github_id": "SSJ-ZYJ",
       "score": 200.0,
       "total_score": 200.0,
@@ -320,7 +200,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 28,
+      "rank": 16,
       "github_id": "serf-huik",
       "score": 200.0,
       "total_score": 200.0,
@@ -330,7 +210,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 29,
+      "rank": 17,
       "github_id": "GaryHu-zzz",
       "score": 200.0,
       "total_score": 200.0,
@@ -340,7 +220,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 30,
+      "rank": 18,
       "github_id": "srhashdh",
       "score": 200.0,
       "total_score": 200.0,
@@ -350,7 +230,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 31,
+      "rank": 19,
       "github_id": "2zuqisong",
       "score": 200.0,
       "total_score": 200.0,
@@ -360,7 +240,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 32,
+      "rank": 20,
       "github_id": "qinzhengxiang",
       "score": 200.0,
       "total_score": 200.0,
@@ -370,7 +250,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 33,
+      "rank": 21,
       "github_id": "xiex386",
       "score": 200.0,
       "total_score": 200.0,
@@ -380,17 +260,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 34,
-      "github_id": "jieniguiemmm",
-      "score": 200.0,
-      "total_score": 200.0,
-      "run_time": "2026-06-05T11:23:40Z",
-      "completion_time": "2026-06-05T11:24:26Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 35,
+      "rank": 22,
       "github_id": "WhiteBearI",
       "score": 200.0,
       "total_score": 200.0,
@@ -400,7 +270,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 36,
+      "rank": 23,
       "github_id": "yyxt-xwy",
       "score": 200.0,
       "total_score": 200.0,
@@ -410,7 +280,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 37,
+      "rank": 24,
       "github_id": "Gmikele",
       "score": 200.0,
       "total_score": 200.0,
@@ -420,7 +290,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 38,
+      "rank": 25,
       "github_id": "endwhiteparadox",
       "score": 200.0,
       "total_score": 200.0,
@@ -430,7 +300,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 39,
+      "rank": 26,
       "github_id": "Sunuywq",
       "score": 200.0,
       "total_score": 200.0,
@@ -440,7 +310,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 40,
+      "rank": 27,
       "github_id": "nv3ifu",
       "score": 200.0,
       "total_score": 200.0,
@@ -450,7 +320,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 41,
+      "rank": 28,
       "github_id": "dweeqhd",
       "score": 200.0,
       "total_score": 200.0,
@@ -460,7 +330,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 42,
+      "rank": 29,
       "github_id": "yunyi1201",
       "score": 195.0,
       "total_score": 200.0,
@@ -470,7 +340,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 43,
+      "rank": 30,
       "github_id": "meat00",
       "score": 195.0,
       "total_score": 200.0,
@@ -480,7 +350,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 44,
+      "rank": 31,
       "github_id": "LNfromNorth",
       "score": 195.0,
       "total_score": 200.0,
@@ -490,7 +360,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 45,
+      "rank": 32,
       "github_id": "adgnaf",
       "score": 195.0,
       "total_score": 200.0,
@@ -500,17 +370,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 46,
-      "github_id": "yummy0406",
-      "score": 195.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-22T16:52:05Z",
-      "completion_time": "2026-04-22T16:53:23Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 47,
+      "rank": 33,
       "github_id": "BoBoDai",
       "score": 195.0,
       "total_score": 200.0,
@@ -520,7 +380,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 48,
+      "rank": 34,
       "github_id": "Kirito-yhh",
       "score": 195.0,
       "total_score": 200.0,
@@ -530,7 +390,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 49,
+      "rank": 35,
       "github_id": "Opadc",
       "score": 195.0,
       "total_score": 200.0,
@@ -540,7 +400,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 50,
+      "rank": 36,
       "github_id": "EmissaryD",
       "score": 195.0,
       "total_score": 200.0,
@@ -550,7 +410,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 51,
+      "rank": 37,
       "github_id": "gulangyuzzz",
       "score": 195.0,
       "total_score": 200.0,
@@ -560,17 +420,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 52,
-      "github_id": "lebenito030",
-      "score": 195.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-14T06:09:07Z",
-      "completion_time": "2026-05-14T06:10:06Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 53,
+      "rank": 38,
       "github_id": "jensenojs",
       "score": 195.0,
       "total_score": 200.0,
@@ -580,7 +430,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 54,
+      "rank": 39,
       "github_id": "yuanyiboyyb",
       "score": 195.0,
       "total_score": 200.0,
@@ -590,7 +440,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 55,
+      "rank": 40,
       "github_id": "Egg12138",
       "score": 195.0,
       "total_score": 200.0,
@@ -600,17 +450,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 56,
-      "github_id": "lukamriccc",
-      "score": 195.0,
-      "total_score": 200.0,
-      "run_time": "2026-06-02T10:09:14Z",
-      "completion_time": "2026-06-02T10:10:05Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 57,
+      "rank": 41,
       "github_id": "after1990s",
       "score": 195.0,
       "total_score": 200.0,
@@ -620,7 +460,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 58,
+      "rank": 42,
       "github_id": "NewFei",
       "score": 195.0,
       "total_score": 200.0,
@@ -630,17 +470,17 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 59,
-      "github_id": "yyf2050567-afk",
+      "rank": 43,
+      "github_id": "apolecoco",
       "score": 195.0,
       "total_score": 200.0,
-      "run_time": "2026-06-28T12:54:35Z",
-      "completion_time": "2026-06-28T12:55:16Z"
+      "run_time": "2026-07-06T08:45:11Z",
+      "completion_time": "2026-07-06T08:46:02Z"
     },
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 60,
+      "rank": 44,
       "github_id": "manbo1234",
       "score": 190.0,
       "total_score": 200.0,
@@ -650,7 +490,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 61,
+      "rank": 45,
       "github_id": "ZHIKAIQ1998",
       "score": 190.0,
       "total_score": 200.0,
@@ -660,7 +500,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 62,
+      "rank": 46,
       "github_id": "cecho9992-boop",
       "score": 190.0,
       "total_score": 200.0,
@@ -670,17 +510,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 63,
-      "github_id": "destinyFvcker",
-      "score": 180.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-12T03:35:38Z",
-      "completion_time": "2026-04-12T03:36:34Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 64,
+      "rank": 47,
       "github_id": "oscizk",
       "score": 180.0,
       "total_score": 200.0,
@@ -690,7 +520,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 65,
+      "rank": 48,
       "github_id": "yeyumeng7799",
       "score": 120.0,
       "total_score": 200.0,
@@ -700,7 +530,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 66,
+      "rank": 49,
       "github_id": "HelloLiYifei",
       "score": 115.0,
       "total_score": 200.0,
@@ -710,7 +540,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 67,
+      "rank": 50,
       "github_id": "chrisynl",
       "score": 100.0,
       "total_score": 200.0,
@@ -720,7 +550,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 68,
+      "rank": 51,
       "github_id": "xxluestc",
       "score": 100.0,
       "total_score": 200.0,
@@ -730,7 +560,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 69,
+      "rank": 52,
       "github_id": "xwwcyber",
       "score": 100.0,
       "total_score": 200.0,
@@ -740,17 +570,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 70,
-      "github_id": "lemonsuqing",
-      "score": 95.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-15T09:12:15Z",
-      "completion_time": "2026-04-15T09:12:59Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 71,
+      "rank": 53,
       "github_id": "ghostdragonzero",
       "score": 95.0,
       "total_score": 200.0,
@@ -760,7 +580,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 72,
+      "rank": 54,
       "github_id": "dazuo233",
       "score": 95.0,
       "total_score": 200.0,
@@ -770,7 +590,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 73,
+      "rank": 55,
       "github_id": "Idonotno",
       "score": 95.0,
       "total_score": 200.0,
@@ -780,7 +600,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 74,
+      "rank": 56,
       "github_id": "firecrack",
       "score": 95.0,
       "total_score": 200.0,
@@ -790,7 +610,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 75,
+      "rank": 57,
       "github_id": "akikaede6",
       "score": 90.0,
       "total_score": 200.0,
@@ -800,7 +620,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 76,
+      "rank": 58,
       "github_id": "yzqyzqyzq-git",
       "score": 90.0,
       "total_score": 200.0,
@@ -810,7 +630,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 77,
+      "rank": 59,
       "github_id": "csdjr",
       "score": 90.0,
       "total_score": 200.0,
@@ -820,37 +640,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 78,
-      "github_id": "zhenbaii",
-      "score": 85.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-09T09:54:50Z",
-      "completion_time": "2026-04-09T09:55:33Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 79,
-      "github_id": "RubMaker",
-      "score": 85.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-10T09:37:36Z",
-      "completion_time": "2026-04-10T09:38:14Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 80,
-      "github_id": "luis-233",
-      "score": 80.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-14T08:53:36Z",
-      "completion_time": "2026-04-14T08:54:20Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 81,
+      "rank": 60,
       "github_id": "Hokfs",
       "score": 80.0,
       "total_score": 200.0,
@@ -860,7 +650,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 82,
+      "rank": 61,
       "github_id": "0ranan",
       "score": 80.0,
       "total_score": 200.0,
@@ -870,7 +660,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 83,
+      "rank": 62,
       "github_id": "h1y2g3l4y5",
       "score": 70.0,
       "total_score": 200.0,
@@ -880,27 +670,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 84,
-      "github_id": "KeyBor",
-      "score": 60.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-06T14:34:14Z",
-      "completion_time": "2026-04-06T14:34:52Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 85,
-      "github_id": "yunjianshijie",
-      "score": 60.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-26T09:55:42Z",
-      "completion_time": "2026-04-26T09:56:39Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 86,
+      "rank": 63,
       "github_id": "55Curry",
       "score": 55.0,
       "total_score": 200.0,
@@ -910,7 +680,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 87,
+      "rank": 64,
       "github_id": "SiYue-ZO",
       "score": 50.0,
       "total_score": 200.0,
@@ -920,7 +690,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 88,
+      "rank": 65,
       "github_id": "AtomAlpaca",
       "score": 50.0,
       "total_score": 200.0,
@@ -930,7 +700,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 89,
+      "rank": 66,
       "github_id": "zhu30844",
       "score": 45.0,
       "total_score": 200.0,
@@ -940,7 +710,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 90,
+      "rank": 67,
       "github_id": "Beatrice0377",
       "score": 40.0,
       "total_score": 200.0,
@@ -950,17 +720,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 91,
-      "github_id": "enlist12",
-      "score": 35.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-09T06:27:14Z",
-      "completion_time": "2026-04-09T06:27:53Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 92,
+      "rank": 68,
       "github_id": "huclimb",
       "score": 35.0,
       "total_score": 200.0,
@@ -970,17 +730,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 93,
-      "github_id": "SinnLiu",
-      "score": 35.0,
-      "total_score": 200.0,
-      "run_time": "2026-05-17T14:49:18Z",
-      "completion_time": "2026-05-17T14:49:47Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 94,
+      "rank": 69,
       "github_id": "keepgoong",
       "score": 30.0,
       "total_score": 200.0,
@@ -990,17 +740,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 95,
-      "github_id": "Lcollection",
-      "score": 25.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-19T22:08:00Z",
-      "completion_time": "2026-04-19T22:08:34Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 96,
+      "rank": 70,
       "github_id": "Sleepless9",
       "score": 25.0,
       "total_score": 200.0,
@@ -1010,17 +750,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 97,
-      "github_id": "GreyFoox",
-      "score": 25.0,
-      "total_score": 200.0,
-      "run_time": "2026-07-03T01:33:00Z",
-      "completion_time": "2026-07-03T01:33:39Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 98,
+      "rank": 71,
       "github_id": "ZT0717",
       "score": 20.0,
       "total_score": 200.0,
@@ -1030,7 +760,17 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 99,
+      "rank": 72,
+      "github_id": "GreyFoox",
+      "score": 20.0,
+      "total_score": 200.0,
+      "run_time": "2026-04-30T06:47:22Z",
+      "completion_time": "2026-04-30T06:48:20Z"
+    },
+    {
+      "stage": "basic",
+      "direction": "basic-c",
+      "rank": 73,
       "github_id": "chennuo927",
       "score": 20.0,
       "total_score": 200.0,
@@ -1040,7 +780,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 100,
+      "rank": 74,
       "github_id": "ZhonghuaQi",
       "score": 15.0,
       "total_score": 200.0,
@@ -1050,7 +790,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 101,
+      "rank": 75,
       "github_id": "ye-rm",
       "score": 10.0,
       "total_score": 200.0,
@@ -1060,7 +800,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 102,
+      "rank": 76,
       "github_id": "WCMS688",
       "score": 10.0,
       "total_score": 200.0,
@@ -1070,17 +810,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 103,
-      "github_id": "DiQing2007",
-      "score": 10.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-20T17:12:02Z",
-      "completion_time": "2026-04-20T17:12:41Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 104,
+      "rank": 77,
       "github_id": "xiaozhuABCD1234",
       "score": 10.0,
       "total_score": 200.0,
@@ -1090,17 +820,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 105,
-      "github_id": "bbbbbq",
-      "score": 5.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-08T16:40:56Z",
-      "completion_time": "2026-04-08T16:41:40Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 106,
+      "rank": 78,
       "github_id": "heichiii",
       "score": 5.0,
       "total_score": 200.0,
@@ -1110,27 +830,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 107,
-      "github_id": "ctdrm",
-      "score": 5.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-13T10:36:32Z",
-      "completion_time": "2026-04-13T10:37:14Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 108,
-      "github_id": "Eclipse-Arrebol",
-      "score": 5.0,
-      "total_score": 200.0,
-      "run_time": "2026-04-13T13:42:29Z",
-      "completion_time": "2026-04-13T13:43:05Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-c",
-      "rank": 109,
+      "rank": 79,
       "github_id": "Eclipse-yanluo",
       "score": 5.0,
       "total_score": 200.0,
@@ -1140,7 +840,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 110,
+      "rank": 80,
       "github_id": "duckchih",
       "score": 5.0,
       "total_score": 200.0,
@@ -1150,7 +850,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 111,
+      "rank": 81,
       "github_id": "lusixing",
       "score": 5.0,
       "total_score": 200.0,
@@ -1160,7 +860,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 112,
+      "rank": 82,
       "github_id": "weypro",
       "score": 5.0,
       "total_score": 200.0,
@@ -1170,7 +870,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 113,
+      "rank": 83,
       "github_id": "zhang-san-007",
       "score": 5.0,
       "total_score": 200.0,
@@ -1180,7 +880,7 @@
     {
       "stage": "basic",
       "direction": "basic-c",
-      "rank": 114,
+      "rank": 84,
       "github_id": "aaaaqweaaaa",
       "score": 0.0,
       "total_score": 200.0,
@@ -1191,16 +891,6 @@
       "stage": "basic",
       "direction": "basic-rust",
       "rank": 1,
-      "github_id": "silicalet",
-      "score": 95.0,
-      "total_score": 95.0,
-      "run_time": "2026-04-06T18:49:35Z",
-      "completion_time": "2026-04-06T18:50:33Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 2,
       "github_id": "srcres258",
       "score": 95.0,
       "total_score": 95.0,
@@ -1210,7 +900,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 3,
+      "rank": 2,
       "github_id": "anicbeer",
       "score": 95.0,
       "total_score": 95.0,
@@ -1220,7 +910,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 4,
+      "rank": 3,
       "github_id": "nusakom",
       "score": 95.0,
       "total_score": 95.0,
@@ -1230,7 +920,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 5,
+      "rank": 4,
       "github_id": "lickoc",
       "score": 95.0,
       "total_score": 95.0,
@@ -1240,7 +930,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 6,
+      "rank": 5,
       "github_id": "Plucky923",
       "score": 95.0,
       "total_score": 95.0,
@@ -1250,7 +940,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 7,
+      "rank": 6,
       "github_id": "Smart-SangGe",
       "score": 95.0,
       "total_score": 95.0,
@@ -1260,17 +950,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 8,
-      "github_id": "destinyFvcker",
-      "score": 95.0,
-      "total_score": 95.0,
-      "run_time": "2026-04-11T18:33:47Z",
-      "completion_time": "2026-04-11T18:34:47Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 9,
+      "rank": 7,
       "github_id": "SlieNce810",
       "score": 95.0,
       "total_score": 95.0,
@@ -1280,7 +960,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 10,
+      "rank": 8,
       "github_id": "csmyx",
       "score": 95.0,
       "total_score": 95.0,
@@ -1290,7 +970,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 11,
+      "rank": 9,
       "github_id": "Kcang-gna",
       "score": 95.0,
       "total_score": 95.0,
@@ -1300,7 +980,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 12,
+      "rank": 10,
       "github_id": "refr66",
       "score": 95.0,
       "total_score": 95.0,
@@ -1310,7 +990,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 13,
+      "rank": 11,
       "github_id": "CFHaini",
       "score": 95.0,
       "total_score": 95.0,
@@ -1320,7 +1000,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 14,
+      "rank": 12,
       "github_id": "coldriver-chen",
       "score": 95.0,
       "total_score": 95.0,
@@ -1330,17 +1010,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 15,
-      "github_id": "LNfromNorth",
-      "score": 95.0,
-      "total_score": 95.0,
-      "run_time": "2026-04-18T07:16:38Z",
-      "completion_time": "2026-04-18T07:17:46Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 16,
+      "rank": 13,
       "github_id": "mympeg",
       "score": 95.0,
       "total_score": 95.0,
@@ -1350,7 +1020,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 17,
+      "rank": 14,
       "github_id": "fgh1999",
       "score": 95.0,
       "total_score": 95.0,
@@ -1360,7 +1030,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 18,
+      "rank": 15,
       "github_id": "caiwen666",
       "score": 95.0,
       "total_score": 95.0,
@@ -1370,7 +1040,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 19,
+      "rank": 16,
       "github_id": "Raczyx",
       "score": 95.0,
       "total_score": 95.0,
@@ -1380,7 +1050,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 20,
+      "rank": 17,
       "github_id": "LYR-liyanrong",
       "score": 95.0,
       "total_score": 95.0,
@@ -1390,7 +1060,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 21,
+      "rank": 18,
       "github_id": "cn-sys",
       "score": 95.0,
       "total_score": 95.0,
@@ -1400,7 +1070,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 22,
+      "rank": 19,
       "github_id": "Takumi-wake",
       "score": 95.0,
       "total_score": 95.0,
@@ -1410,7 +1080,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 23,
+      "rank": 20,
       "github_id": "playerInEminor",
       "score": 95.0,
       "total_score": 95.0,
@@ -1420,7 +1090,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 24,
+      "rank": 21,
       "github_id": "flespark",
       "score": 95.0,
       "total_score": 95.0,
@@ -1430,7 +1100,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 25,
+      "rank": 22,
       "github_id": "BoBoDai",
       "score": 95.0,
       "total_score": 95.0,
@@ -1440,7 +1110,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 26,
+      "rank": 23,
       "github_id": "trace1729",
       "score": 95.0,
       "total_score": 95.0,
@@ -1450,7 +1120,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 27,
+      "rank": 24,
       "github_id": "PingGuoMiaoMiao",
       "score": 95.0,
       "total_score": 95.0,
@@ -1460,17 +1130,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 28,
-      "github_id": "jlff",
-      "score": 95.0,
-      "total_score": 95.0,
-      "run_time": "2026-05-02T02:58:00Z",
-      "completion_time": "2026-05-02T02:59:28Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 29,
+      "rank": 25,
       "github_id": "Promin3",
       "score": 95.0,
       "total_score": 95.0,
@@ -1480,7 +1140,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 30,
+      "rank": 26,
       "github_id": "msuadOf",
       "score": 95.0,
       "total_score": 95.0,
@@ -1490,7 +1150,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 31,
+      "rank": 27,
       "github_id": "zyk632",
       "score": 95.0,
       "total_score": 95.0,
@@ -1500,7 +1160,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 32,
+      "rank": 28,
       "github_id": "PassingThroughStarDust",
       "score": 95.0,
       "total_score": 95.0,
@@ -1510,7 +1170,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 33,
+      "rank": 29,
       "github_id": "ghostdragonzero",
       "score": 95.0,
       "total_score": 95.0,
@@ -1520,7 +1180,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 34,
+      "rank": 30,
       "github_id": "eyauwag",
       "score": 95.0,
       "total_score": 95.0,
@@ -1530,17 +1190,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 35,
-      "github_id": "ye-rm",
-      "score": 95.0,
-      "total_score": 95.0,
-      "run_time": "2026-05-09T08:46:33Z",
-      "completion_time": "2026-05-09T08:47:53Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 36,
+      "rank": 31,
       "github_id": "lsynpy",
       "score": 95.0,
       "total_score": 95.0,
@@ -1550,7 +1200,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 37,
+      "rank": 32,
       "github_id": "yastiqus",
       "score": 95.0,
       "total_score": 95.0,
@@ -1560,7 +1210,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 38,
+      "rank": 33,
       "github_id": "rhbfc",
       "score": 95.0,
       "total_score": 95.0,
@@ -1570,7 +1220,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 39,
+      "rank": 34,
       "github_id": "yuanyiboyyb",
       "score": 95.0,
       "total_score": 95.0,
@@ -1580,7 +1230,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 40,
+      "rank": 35,
       "github_id": "lebenito030",
       "score": 95.0,
       "total_score": 95.0,
@@ -1590,7 +1240,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 41,
+      "rank": 36,
       "github_id": "OutisNyel",
       "score": 95.0,
       "total_score": 95.0,
@@ -1600,7 +1250,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 42,
+      "rank": 37,
       "github_id": "srhashdh",
       "score": 95.0,
       "total_score": 95.0,
@@ -1610,7 +1260,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 43,
+      "rank": 38,
       "github_id": "assassinlex",
       "score": 95.0,
       "total_score": 95.0,
@@ -1620,7 +1270,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 44,
+      "rank": 39,
       "github_id": "scrail",
       "score": 94.0,
       "total_score": 95.0,
@@ -1630,7 +1280,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 45,
+      "rank": 40,
       "github_id": "manbo1234",
       "score": 94.0,
       "total_score": 95.0,
@@ -1640,17 +1290,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 46,
-      "github_id": "IiCEight",
-      "score": 94.0,
-      "total_score": 95.0,
-      "run_time": "2026-06-08T07:12:11Z",
-      "completion_time": "2026-06-08T07:13:16Z"
-    },
-    {
-      "stage": "basic",
-      "direction": "basic-rust",
-      "rank": 47,
+      "rank": 41,
       "github_id": "Egg12138",
       "score": 94.0,
       "total_score": 95.0,
@@ -1660,17 +1300,17 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 48,
+      "rank": 42,
       "github_id": "Vn1c0rn",
       "score": 94.0,
       "total_score": 95.0,
-      "run_time": "2026-06-23T08:33:31Z",
-      "completion_time": "2026-06-23T08:34:34Z"
+      "run_time": "2026-06-23T08:30:17Z",
+      "completion_time": "2026-06-23T08:31:20Z"
     },
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 49,
+      "rank": 43,
       "github_id": "l825l",
       "score": 94.0,
       "total_score": 95.0,
@@ -1680,7 +1320,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 50,
+      "rank": 44,
       "github_id": "ovwxxwvo",
       "score": 94.0,
       "total_score": 95.0,
@@ -1690,7 +1330,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 51,
+      "rank": 45,
       "github_id": "AtomAlpaca",
       "score": 50.0,
       "total_score": 95.0,
@@ -1700,7 +1340,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 52,
+      "rank": 46,
       "github_id": "xyjl-ly",
       "score": 36.0,
       "total_score": 95.0,
@@ -1710,7 +1350,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 53,
+      "rank": 47,
       "github_id": "xxluestc",
       "score": 33.0,
       "total_score": 95.0,
@@ -1720,7 +1360,7 @@
     {
       "stage": "basic",
       "direction": "basic-rust",
-      "rank": 54,
+      "rank": 48,
       "github_id": "benx-guo",
       "score": 1.0,
       "total_score": 95.0,
@@ -1751,16 +1391,6 @@
       "stage": "professional",
       "direction": "cpu",
       "rank": 3,
-      "github_id": "Plucky923",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-17T05:55:18Z",
-      "completion_time": "2026-04-17T06:02:52Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 4,
       "github_id": "Dirinkbottle",
       "score": 100.0,
       "total_score": 100.0,
@@ -1770,27 +1400,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 5,
-      "github_id": "clsfantasy",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T09:39:55Z",
-      "completion_time": "2026-04-18T09:47:38Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 6,
-      "github_id": "csmyx",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T15:58:16Z",
-      "completion_time": "2026-04-18T16:06:00Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 7,
+      "rank": 4,
       "github_id": "coldriver-chen",
       "score": 100.0,
       "total_score": 100.0,
@@ -1800,7 +1410,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 8,
+      "rank": 5,
       "github_id": "h1y2g3l4y5",
       "score": 100.0,
       "total_score": 100.0,
@@ -1810,7 +1420,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 9,
+      "rank": 6,
       "github_id": "anicbeer",
       "score": 100.0,
       "total_score": 100.0,
@@ -1820,7 +1430,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 10,
+      "rank": 7,
       "github_id": "srcres258",
       "score": 100.0,
       "total_score": 100.0,
@@ -1830,7 +1440,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 11,
+      "rank": 8,
       "github_id": "Aozaki-aok0",
       "score": 100.0,
       "total_score": 100.0,
@@ -1840,17 +1450,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 12,
-      "github_id": "KeyBor",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-28T05:52:57Z",
-      "completion_time": "2026-04-28T06:00:21Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 13,
+      "rank": 9,
       "github_id": "adgnaf",
       "score": 100.0,
       "total_score": 100.0,
@@ -1860,7 +1460,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 14,
+      "rank": 10,
       "github_id": "PingGuoMiaoMiao",
       "score": 100.0,
       "total_score": 100.0,
@@ -1870,17 +1470,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 15,
-      "github_id": "lusixing",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-04T09:14:07Z",
-      "completion_time": "2026-05-04T09:21:59Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 16,
+      "rank": 11,
       "github_id": "Sutter099",
       "score": 100.0,
       "total_score": 100.0,
@@ -1890,7 +1480,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 17,
+      "rank": 12,
       "github_id": "skinterqwe",
       "score": 100.0,
       "total_score": 100.0,
@@ -1900,7 +1490,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 18,
+      "rank": 13,
       "github_id": "scrail",
       "score": 100.0,
       "total_score": 100.0,
@@ -1910,7 +1500,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 19,
+      "rank": 14,
       "github_id": "silicalet",
       "score": 100.0,
       "total_score": 100.0,
@@ -1920,7 +1510,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 20,
+      "rank": 15,
       "github_id": "trace1729",
       "score": 100.0,
       "total_score": 100.0,
@@ -1930,7 +1520,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 21,
+      "rank": 16,
       "github_id": "vsvnakers",
       "score": 100.0,
       "total_score": 100.0,
@@ -1940,17 +1530,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 22,
-      "github_id": "bbbbbq",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-23T16:58:09Z",
-      "completion_time": "2026-05-23T17:05:41Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "cpu",
-      "rank": 23,
+      "rank": 17,
       "github_id": "enlist12",
       "score": 100.0,
       "total_score": 100.0,
@@ -1960,7 +1540,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 24,
+      "rank": 18,
       "github_id": "yuanyiboyyb",
       "score": 100.0,
       "total_score": 100.0,
@@ -1970,7 +1550,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 25,
+      "rank": 19,
       "github_id": "Eclipse-Arrebol",
       "score": 100.0,
       "total_score": 100.0,
@@ -1980,7 +1560,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 26,
+      "rank": 20,
       "github_id": "flespark",
       "score": 100.0,
       "total_score": 100.0,
@@ -1990,7 +1570,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 27,
+      "rank": 21,
       "github_id": "2zuqisong",
       "score": 100.0,
       "total_score": 100.0,
@@ -2000,7 +1580,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 28,
+      "rank": 22,
       "github_id": "srhashdh",
       "score": 100.0,
       "total_score": 100.0,
@@ -2010,7 +1590,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 29,
+      "rank": 23,
       "github_id": "random25160765-collab",
       "score": 100.0,
       "total_score": 100.0,
@@ -2020,7 +1600,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 30,
+      "rank": 24,
       "github_id": "First-da",
       "score": 100.0,
       "total_score": 100.0,
@@ -2030,7 +1610,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 31,
+      "rank": 25,
       "github_id": "asdfgh870",
       "score": 100.0,
       "total_score": 100.0,
@@ -2040,7 +1620,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 32,
+      "rank": 26,
       "github_id": "WhiteBearI",
       "score": 100.0,
       "total_score": 100.0,
@@ -2050,7 +1630,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 33,
+      "rank": 27,
       "github_id": "Opadc",
       "score": 60.0,
       "total_score": 100.0,
@@ -2060,7 +1640,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 34,
+      "rank": 28,
       "github_id": "mhubing",
       "score": 50.0,
       "total_score": 100.0,
@@ -2070,7 +1650,7 @@
     {
       "stage": "professional",
       "direction": "cpu",
-      "rank": 35,
+      "rank": 29,
       "github_id": "litianxing2016",
       "score": 10.0,
       "total_score": 100.0,
@@ -2101,16 +1681,6 @@
       "stage": "professional",
       "direction": "soc",
       "rank": 3,
-      "github_id": "Plucky923",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-17T05:55:18Z",
-      "completion_time": "2026-04-17T06:02:59Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 4,
       "github_id": "Dirinkbottle",
       "score": 100.0,
       "total_score": 100.0,
@@ -2120,17 +1690,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 5,
-      "github_id": "KeyBor",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-28T05:52:57Z",
-      "completion_time": "2026-04-28T06:00:32Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 6,
+      "rank": 4,
       "github_id": "eternal-echo",
       "score": 100.0,
       "total_score": 100.0,
@@ -2140,7 +1700,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 7,
+      "rank": 5,
       "github_id": "Sutter099",
       "score": 100.0,
       "total_score": 100.0,
@@ -2150,7 +1710,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 8,
+      "rank": 6,
       "github_id": "skinterqwe",
       "score": 100.0,
       "total_score": 100.0,
@@ -2160,7 +1720,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 9,
+      "rank": 7,
       "github_id": "zhenbaii",
       "score": 100.0,
       "total_score": 100.0,
@@ -2170,7 +1730,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 10,
+      "rank": 8,
       "github_id": "silicalet",
       "score": 100.0,
       "total_score": 100.0,
@@ -2180,7 +1740,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 11,
+      "rank": 9,
       "github_id": "lingqian-gi",
       "score": 100.0,
       "total_score": 100.0,
@@ -2190,7 +1750,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 12,
+      "rank": 10,
       "github_id": "trace1729",
       "score": 100.0,
       "total_score": 100.0,
@@ -2200,7 +1760,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 13,
+      "rank": 11,
       "github_id": "vsvnakers",
       "score": 100.0,
       "total_score": 100.0,
@@ -2210,7 +1770,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 14,
+      "rank": 12,
       "github_id": "ghostdragonzero",
       "score": 100.0,
       "total_score": 100.0,
@@ -2220,7 +1780,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 15,
+      "rank": 13,
       "github_id": "yuanyiboyyb",
       "score": 100.0,
       "total_score": 100.0,
@@ -2230,7 +1790,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 16,
+      "rank": 14,
       "github_id": "flamboyante",
       "score": 100.0,
       "total_score": 100.0,
@@ -2240,7 +1800,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 17,
+      "rank": 15,
       "github_id": "Eclipse-Arrebol",
       "score": 100.0,
       "total_score": 100.0,
@@ -2250,7 +1810,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 18,
+      "rank": 16,
       "github_id": "csdjr",
       "score": 100.0,
       "total_score": 100.0,
@@ -2260,7 +1820,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 19,
+      "rank": 17,
       "github_id": "Gmikele",
       "score": 100.0,
       "total_score": 100.0,
@@ -2270,7 +1830,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 20,
+      "rank": 18,
       "github_id": "jack-wang-176",
       "score": 100.0,
       "total_score": 100.0,
@@ -2280,7 +1840,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 21,
+      "rank": 19,
       "github_id": "rhbfc",
       "score": 100.0,
       "total_score": 100.0,
@@ -2290,7 +1850,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 22,
+      "rank": 20,
       "github_id": "serf-huik",
       "score": 100.0,
       "total_score": 100.0,
@@ -2300,7 +1860,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 23,
+      "rank": 21,
       "github_id": "dazuo233",
       "score": 100.0,
       "total_score": 100.0,
@@ -2310,7 +1870,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 24,
+      "rank": 22,
       "github_id": "random25160765-collab",
       "score": 100.0,
       "total_score": 100.0,
@@ -2320,7 +1880,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 25,
+      "rank": 23,
       "github_id": "First-da",
       "score": 100.0,
       "total_score": 100.0,
@@ -2330,7 +1890,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 26,
+      "rank": 24,
       "github_id": "Sunuywq",
       "score": 100.0,
       "total_score": 100.0,
@@ -2340,7 +1900,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 27,
+      "rank": 25,
       "github_id": "asdfgh870",
       "score": 100.0,
       "total_score": 100.0,
@@ -2350,7 +1910,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 28,
+      "rank": 26,
       "github_id": "WhiteBearI",
       "score": 100.0,
       "total_score": 100.0,
@@ -2360,7 +1920,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 29,
+      "rank": 27,
       "github_id": "jieniguiemmm",
       "score": 100.0,
       "total_score": 100.0,
@@ -2370,7 +1930,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 30,
+      "rank": 28,
       "github_id": "PingGuoMiaoMiao",
       "score": 40.0,
       "total_score": 100.0,
@@ -2380,7 +1940,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 31,
+      "rank": 29,
       "github_id": "flespark",
       "score": 40.0,
       "total_score": 100.0,
@@ -2390,7 +1950,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 32,
+      "rank": 30,
       "github_id": "Lfan-ke",
       "score": 10.0,
       "total_score": 100.0,
@@ -2400,7 +1960,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 33,
+      "rank": 31,
       "github_id": "zevorn",
       "score": 10.0,
       "total_score": 100.0,
@@ -2410,27 +1970,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 34,
-      "github_id": "clsfantasy",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T09:39:55Z",
-      "completion_time": "2026-04-18T09:47:46Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 35,
-      "github_id": "csmyx",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T15:58:16Z",
-      "completion_time": "2026-04-18T16:05:52Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 36,
+      "rank": 32,
       "github_id": "coldriver-chen",
       "score": 10.0,
       "total_score": 100.0,
@@ -2440,17 +1980,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 37,
-      "github_id": "lickoc",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T11:11:58Z",
-      "completion_time": "2026-04-21T11:19:53Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 38,
+      "rank": 33,
       "github_id": "h1y2g3l4y5",
       "score": 10.0,
       "total_score": 100.0,
@@ -2460,17 +1990,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 39,
-      "github_id": "Altersieg",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T19:09:31Z",
-      "completion_time": "2026-04-21T19:17:39Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 40,
+      "rank": 34,
       "github_id": "anicbeer",
       "score": 10.0,
       "total_score": 100.0,
@@ -2480,7 +2000,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 41,
+      "rank": 35,
       "github_id": "Kcang-gna",
       "score": 10.0,
       "total_score": 100.0,
@@ -2490,7 +2010,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 42,
+      "rank": 36,
       "github_id": "xxluestc",
       "score": 10.0,
       "total_score": 100.0,
@@ -2500,7 +2020,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 43,
+      "rank": 37,
       "github_id": "srcres258",
       "score": 10.0,
       "total_score": 100.0,
@@ -2510,17 +2030,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 44,
-      "github_id": "Codeman-1999",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-25T10:13:28Z",
-      "completion_time": "2026-04-25T10:21:05Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 45,
+      "rank": 38,
       "github_id": "Aozaki-aok0",
       "score": 10.0,
       "total_score": 100.0,
@@ -2530,7 +2040,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 46,
+      "rank": 39,
       "github_id": "mhubing",
       "score": 10.0,
       "total_score": 100.0,
@@ -2540,7 +2050,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 47,
+      "rank": 40,
       "github_id": "ihanzh",
       "score": 10.0,
       "total_score": 100.0,
@@ -2550,7 +2060,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 48,
+      "rank": 41,
       "github_id": "adgnaf",
       "score": 10.0,
       "total_score": 100.0,
@@ -2560,47 +2070,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 49,
-      "github_id": "yunyi1201",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-30T02:03:39Z",
-      "completion_time": "2026-04-30T02:13:56Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 50,
-      "github_id": "bbbbbq",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-01T17:31:40Z",
-      "completion_time": "2026-05-01T17:39:52Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 51,
-      "github_id": "lusixing",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-04T09:14:07Z",
-      "completion_time": "2026-05-04T09:22:19Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 52,
-      "github_id": "destinyFvcker",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-06T14:01:19Z",
-      "completion_time": "2026-05-06T14:09:27Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 53,
+      "rank": 42,
       "github_id": "73fc",
       "score": 10.0,
       "total_score": 100.0,
@@ -2610,7 +2080,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 54,
+      "rank": 43,
       "github_id": "yunjianshijie",
       "score": 10.0,
       "total_score": 100.0,
@@ -2620,7 +2090,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 55,
+      "rank": 44,
       "github_id": "scrail",
       "score": 10.0,
       "total_score": 100.0,
@@ -2630,7 +2100,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 56,
+      "rank": 45,
       "github_id": "shengdaozm",
       "score": 10.0,
       "total_score": 100.0,
@@ -2640,7 +2110,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 57,
+      "rank": 46,
       "github_id": "Firegooder",
       "score": 10.0,
       "total_score": 100.0,
@@ -2650,7 +2120,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 58,
+      "rank": 47,
       "github_id": "enlist12",
       "score": 10.0,
       "total_score": 100.0,
@@ -2660,7 +2130,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 59,
+      "rank": 48,
       "github_id": "Opadc",
       "score": 10.0,
       "total_score": 100.0,
@@ -2670,7 +2140,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 60,
+      "rank": 49,
       "github_id": "LiuHongsGitHub",
       "score": 10.0,
       "total_score": 100.0,
@@ -2680,7 +2150,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 61,
+      "rank": 50,
       "github_id": "cn-sys",
       "score": 10.0,
       "total_score": 100.0,
@@ -2690,7 +2160,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 62,
+      "rank": 51,
       "github_id": "littlewangzai-orz",
       "score": 10.0,
       "total_score": 100.0,
@@ -2700,7 +2170,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 63,
+      "rank": 52,
       "github_id": "2zuqisong",
       "score": 10.0,
       "total_score": 100.0,
@@ -2710,7 +2180,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 64,
+      "rank": 53,
       "github_id": "srhashdh",
       "score": 10.0,
       "total_score": 100.0,
@@ -2720,7 +2190,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 65,
+      "rank": 54,
       "github_id": "eyauwag",
       "score": 10.0,
       "total_score": 100.0,
@@ -2730,7 +2200,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 66,
+      "rank": 55,
       "github_id": "xiaoerlang0359-debug",
       "score": 10.0,
       "total_score": 100.0,
@@ -2740,17 +2210,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 67,
-      "github_id": "luis-233",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-06-08T02:24:01Z",
-      "completion_time": "2026-06-08T02:31:42Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "soc",
-      "rank": 68,
+      "rank": 56,
       "github_id": "jensenojs",
       "score": 10.0,
       "total_score": 100.0,
@@ -2760,7 +2220,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 69,
+      "rank": 57,
       "github_id": "refr66",
       "score": 10.0,
       "total_score": 100.0,
@@ -2770,7 +2230,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 70,
+      "rank": 58,
       "github_id": "yyxt-xwy",
       "score": 10.0,
       "total_score": 100.0,
@@ -2780,7 +2240,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 71,
+      "rank": 59,
       "github_id": "xiex386",
       "score": 10.0,
       "total_score": 100.0,
@@ -2790,7 +2250,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 72,
+      "rank": 60,
       "github_id": "dweeqhd",
       "score": 10.0,
       "total_score": 100.0,
@@ -2800,7 +2260,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 73,
+      "rank": 61,
       "github_id": "litianxing2016",
       "score": 10.0,
       "total_score": 100.0,
@@ -2810,7 +2270,7 @@
     {
       "stage": "professional",
       "direction": "soc",
-      "rank": 74,
+      "rank": 62,
       "github_id": "ovwxxwvo",
       "score": 10.0,
       "total_score": 100.0,
@@ -2841,36 +2301,6 @@
       "stage": "professional",
       "direction": "gpgpu",
       "rank": 3,
-      "github_id": "Altersieg",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T19:09:31Z",
-      "completion_time": "2026-04-21T19:16:58Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 4,
-      "github_id": "Codeman-1999",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-25T10:13:28Z",
-      "completion_time": "2026-04-25T10:21:13Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 5,
-      "github_id": "KeyBor",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-28T05:52:57Z",
-      "completion_time": "2026-04-28T06:00:29Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 6,
       "github_id": "skinterqwe",
       "score": 100.0,
       "total_score": 100.0,
@@ -2880,7 +2310,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 7,
+      "rank": 4,
       "github_id": "73fc",
       "score": 100.0,
       "total_score": 100.0,
@@ -2890,7 +2320,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 8,
+      "rank": 5,
       "github_id": "scrail",
       "score": 100.0,
       "total_score": 100.0,
@@ -2900,7 +2330,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 9,
+      "rank": 6,
       "github_id": "silicalet",
       "score": 100.0,
       "total_score": 100.0,
@@ -2910,7 +2340,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 10,
+      "rank": 7,
       "github_id": "trace1729",
       "score": 100.0,
       "total_score": 100.0,
@@ -2920,7 +2350,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 11,
+      "rank": 8,
       "github_id": "Firegooder",
       "score": 100.0,
       "total_score": 100.0,
@@ -2930,7 +2360,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 12,
+      "rank": 9,
       "github_id": "vsvnakers",
       "score": 100.0,
       "total_score": 100.0,
@@ -2940,17 +2370,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 13,
-      "github_id": "bbbbbq",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-23T16:58:09Z",
-      "completion_time": "2026-05-23T17:05:36Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 14,
+      "rank": 10,
       "github_id": "LiuHongsGitHub",
       "score": 100.0,
       "total_score": 100.0,
@@ -2960,7 +2380,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 15,
+      "rank": 11,
       "github_id": "cn-sys",
       "score": 100.0,
       "total_score": 100.0,
@@ -2970,7 +2390,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 16,
+      "rank": 12,
       "github_id": "xiaoerlang0359-debug",
       "score": 100.0,
       "total_score": 100.0,
@@ -2980,17 +2400,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 17,
-      "github_id": "luis-233",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-06-08T02:24:01Z",
-      "completion_time": "2026-06-08T02:32:18Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 18,
+      "rank": 13,
       "github_id": "jensenojs",
       "score": 100.0,
       "total_score": 100.0,
@@ -3000,7 +2410,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 19,
+      "rank": 14,
       "github_id": "random25160765-collab",
       "score": 100.0,
       "total_score": 100.0,
@@ -3010,7 +2420,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 20,
+      "rank": 15,
       "github_id": "refr66",
       "score": 100.0,
       "total_score": 100.0,
@@ -3020,7 +2430,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 21,
+      "rank": 16,
       "github_id": "WhiteBearI",
       "score": 100.0,
       "total_score": 100.0,
@@ -3030,7 +2440,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 22,
+      "rank": 17,
       "github_id": "yyxt-xwy",
       "score": 100.0,
       "total_score": 100.0,
@@ -3040,7 +2450,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 23,
+      "rank": 18,
       "github_id": "xiex386",
       "score": 100.0,
       "total_score": 100.0,
@@ -3050,7 +2460,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 24,
+      "rank": 19,
       "github_id": "dweeqhd",
       "score": 100.0,
       "total_score": 100.0,
@@ -3060,7 +2470,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 25,
+      "rank": 20,
       "github_id": "xxluestc",
       "score": 82.0,
       "total_score": 100.0,
@@ -3070,7 +2480,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 26,
+      "rank": 21,
       "github_id": "ihanzh",
       "score": 70.0,
       "total_score": 100.0,
@@ -3080,7 +2490,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 27,
+      "rank": 22,
       "github_id": "Eclipse-Arrebol",
       "score": 64.0,
       "total_score": 100.0,
@@ -3090,7 +2500,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 28,
+      "rank": 23,
       "github_id": "littlewangzai-orz",
       "score": 11.0,
       "total_score": 100.0,
@@ -3100,7 +2510,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 29,
+      "rank": 24,
       "github_id": "dingtao1",
       "score": 5.0,
       "total_score": 100.0,
@@ -3110,7 +2520,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 30,
+      "rank": 25,
       "github_id": "Lfan-ke",
       "score": 5.0,
       "total_score": 100.0,
@@ -3120,17 +2530,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 31,
-      "github_id": "Plucky923",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-17T05:55:18Z",
-      "completion_time": "2026-04-17T06:03:38Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 32,
+      "rank": 26,
       "github_id": "zevorn",
       "score": 5.0,
       "total_score": 100.0,
@@ -3140,27 +2540,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 33,
-      "github_id": "clsfantasy",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T09:39:55Z",
-      "completion_time": "2026-04-18T09:47:53Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 34,
-      "github_id": "csmyx",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T15:58:16Z",
-      "completion_time": "2026-04-18T16:05:51Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 35,
+      "rank": 27,
       "github_id": "coldriver-chen",
       "score": 5.0,
       "total_score": 100.0,
@@ -3170,17 +2550,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 36,
-      "github_id": "lickoc",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T11:11:58Z",
-      "completion_time": "2026-04-21T11:30:47Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 37,
+      "rank": 28,
       "github_id": "h1y2g3l4y5",
       "score": 5.0,
       "total_score": 100.0,
@@ -3190,7 +2560,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 38,
+      "rank": 29,
       "github_id": "anicbeer",
       "score": 5.0,
       "total_score": 100.0,
@@ -3200,7 +2570,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 39,
+      "rank": 30,
       "github_id": "Kcang-gna",
       "score": 5.0,
       "total_score": 100.0,
@@ -3210,7 +2580,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 40,
+      "rank": 31,
       "github_id": "srcres258",
       "score": 5.0,
       "total_score": 100.0,
@@ -3220,7 +2590,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 41,
+      "rank": 32,
       "github_id": "Aozaki-aok0",
       "score": 5.0,
       "total_score": 100.0,
@@ -3230,7 +2600,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 42,
+      "rank": 33,
       "github_id": "mhubing",
       "score": 5.0,
       "total_score": 100.0,
@@ -3240,7 +2610,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 43,
+      "rank": 34,
       "github_id": "adgnaf",
       "score": 5.0,
       "total_score": 100.0,
@@ -3250,17 +2620,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 44,
-      "github_id": "yunyi1201",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-30T02:03:39Z",
-      "completion_time": "2026-04-30T02:12:59Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 45,
+      "rank": 35,
       "github_id": "eternal-echo",
       "score": 5.0,
       "total_score": 100.0,
@@ -3270,7 +2630,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 46,
+      "rank": 36,
       "github_id": "PingGuoMiaoMiao",
       "score": 5.0,
       "total_score": 100.0,
@@ -3280,27 +2640,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 47,
-      "github_id": "lusixing",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-04T09:14:07Z",
-      "completion_time": "2026-05-04T09:21:50Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 48,
-      "github_id": "destinyFvcker",
-      "score": 5.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-06T14:01:19Z",
-      "completion_time": "2026-05-06T14:10:17Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "gpgpu",
-      "rank": 49,
+      "rank": 37,
       "github_id": "Sutter099",
       "score": 5.0,
       "total_score": 100.0,
@@ -3310,7 +2650,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 50,
+      "rank": 38,
       "github_id": "yunjianshijie",
       "score": 5.0,
       "total_score": 100.0,
@@ -3320,7 +2660,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 51,
+      "rank": 39,
       "github_id": "zhenbaii",
       "score": 5.0,
       "total_score": 100.0,
@@ -3330,7 +2670,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 52,
+      "rank": 40,
       "github_id": "lingqian-gi",
       "score": 5.0,
       "total_score": 100.0,
@@ -3340,7 +2680,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 53,
+      "rank": 41,
       "github_id": "shengdaozm",
       "score": 5.0,
       "total_score": 100.0,
@@ -3350,7 +2690,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 54,
+      "rank": 42,
       "github_id": "ghostdragonzero",
       "score": 5.0,
       "total_score": 100.0,
@@ -3360,7 +2700,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 55,
+      "rank": 43,
       "github_id": "enlist12",
       "score": 5.0,
       "total_score": 100.0,
@@ -3370,7 +2710,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 56,
+      "rank": 44,
       "github_id": "yuanyiboyyb",
       "score": 5.0,
       "total_score": 100.0,
@@ -3380,7 +2720,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 57,
+      "rank": 45,
       "github_id": "Opadc",
       "score": 5.0,
       "total_score": 100.0,
@@ -3390,7 +2730,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 58,
+      "rank": 46,
       "github_id": "flamboyante",
       "score": 5.0,
       "total_score": 100.0,
@@ -3400,7 +2740,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 59,
+      "rank": 47,
       "github_id": "flespark",
       "score": 5.0,
       "total_score": 100.0,
@@ -3410,7 +2750,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 60,
+      "rank": 48,
       "github_id": "csdjr",
       "score": 5.0,
       "total_score": 100.0,
@@ -3420,7 +2760,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 61,
+      "rank": 49,
       "github_id": "2zuqisong",
       "score": 5.0,
       "total_score": 100.0,
@@ -3430,7 +2770,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 62,
+      "rank": 50,
       "github_id": "srhashdh",
       "score": 5.0,
       "total_score": 100.0,
@@ -3440,7 +2780,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 63,
+      "rank": 51,
       "github_id": "eyauwag",
       "score": 5.0,
       "total_score": 100.0,
@@ -3450,7 +2790,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 64,
+      "rank": 52,
       "github_id": "Gmikele",
       "score": 5.0,
       "total_score": 100.0,
@@ -3460,7 +2800,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 65,
+      "rank": 53,
       "github_id": "jack-wang-176",
       "score": 5.0,
       "total_score": 100.0,
@@ -3470,7 +2810,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 66,
+      "rank": 54,
       "github_id": "serf-huik",
       "score": 5.0,
       "total_score": 100.0,
@@ -3480,7 +2820,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 67,
+      "rank": 55,
       "github_id": "dazuo233",
       "score": 5.0,
       "total_score": 100.0,
@@ -3490,7 +2830,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 68,
+      "rank": 56,
       "github_id": "First-da",
       "score": 5.0,
       "total_score": 100.0,
@@ -3500,7 +2840,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 69,
+      "rank": 57,
       "github_id": "Sunuywq",
       "score": 5.0,
       "total_score": 100.0,
@@ -3510,7 +2850,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 70,
+      "rank": 58,
       "github_id": "asdfgh870",
       "score": 5.0,
       "total_score": 100.0,
@@ -3520,7 +2860,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 71,
+      "rank": 59,
       "github_id": "jieniguiemmm",
       "score": 5.0,
       "total_score": 100.0,
@@ -3530,7 +2870,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 72,
+      "rank": 60,
       "github_id": "litianxing2016",
       "score": 5.0,
       "total_score": 100.0,
@@ -3540,7 +2880,7 @@
     {
       "stage": "professional",
       "direction": "gpgpu",
-      "rank": 73,
+      "rank": 61,
       "github_id": "ovwxxwvo",
       "score": 5.0,
       "total_score": 100.0,
@@ -3551,16 +2891,6 @@
       "stage": "professional",
       "direction": "rust",
       "rank": 1,
-      "github_id": "Plucky923",
-      "score": 100.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-17T05:55:18Z",
-      "completion_time": "2026-04-17T06:02:52Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 2,
       "github_id": "Kcang-gna",
       "score": 100.0,
       "total_score": 100.0,
@@ -3570,7 +2900,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 3,
+      "rank": 2,
       "github_id": "ihanzh",
       "score": 100.0,
       "total_score": 100.0,
@@ -3580,7 +2910,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 4,
+      "rank": 3,
       "github_id": "silicalet",
       "score": 100.0,
       "total_score": 100.0,
@@ -3590,7 +2920,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 5,
+      "rank": 4,
       "github_id": "vsvnakers",
       "score": 100.0,
       "total_score": 100.0,
@@ -3600,7 +2930,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 6,
+      "rank": 5,
       "github_id": "ghostdragonzero",
       "score": 100.0,
       "total_score": 100.0,
@@ -3610,7 +2940,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 7,
+      "rank": 6,
       "github_id": "eyauwag",
       "score": 100.0,
       "total_score": 100.0,
@@ -3620,7 +2950,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 8,
+      "rank": 7,
       "github_id": "random25160765-collab",
       "score": 100.0,
       "total_score": 100.0,
@@ -3630,7 +2960,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 9,
+      "rank": 8,
       "github_id": "Lfan-ke",
       "score": 30.0,
       "total_score": 100.0,
@@ -3640,17 +2970,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 10,
-      "github_id": "lickoc",
-      "score": 30.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T11:11:58Z",
-      "completion_time": "2026-04-21T11:19:58Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 11,
+      "rank": 9,
       "github_id": "jack-wang-176",
       "score": 30.0,
       "total_score": 100.0,
@@ -3660,7 +2980,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 12,
+      "rank": 10,
       "github_id": "dingtao1",
       "score": 10.0,
       "total_score": 100.0,
@@ -3670,7 +2990,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 13,
+      "rank": 11,
       "github_id": "fbt1709",
       "score": 10.0,
       "total_score": 100.0,
@@ -3680,7 +3000,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 14,
+      "rank": 12,
       "github_id": "Dirinkbottle",
       "score": 10.0,
       "total_score": 100.0,
@@ -3690,7 +3010,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 15,
+      "rank": 13,
       "github_id": "zevorn",
       "score": 10.0,
       "total_score": 100.0,
@@ -3700,27 +3020,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 16,
-      "github_id": "clsfantasy",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T09:39:55Z",
-      "completion_time": "2026-04-18T09:48:26Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 17,
-      "github_id": "csmyx",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-18T15:58:16Z",
-      "completion_time": "2026-04-18T16:05:52Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 18,
+      "rank": 14,
       "github_id": "coldriver-chen",
       "score": 10.0,
       "total_score": 100.0,
@@ -3730,7 +3030,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 19,
+      "rank": 15,
       "github_id": "h1y2g3l4y5",
       "score": 10.0,
       "total_score": 100.0,
@@ -3740,17 +3040,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 20,
-      "github_id": "Altersieg",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-21T19:09:31Z",
-      "completion_time": "2026-04-21T19:17:49Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 21,
+      "rank": 16,
       "github_id": "anicbeer",
       "score": 10.0,
       "total_score": 100.0,
@@ -3760,7 +3050,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 22,
+      "rank": 17,
       "github_id": "xxluestc",
       "score": 10.0,
       "total_score": 100.0,
@@ -3770,7 +3060,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 23,
+      "rank": 18,
       "github_id": "srcres258",
       "score": 10.0,
       "total_score": 100.0,
@@ -3780,17 +3070,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 24,
-      "github_id": "Codeman-1999",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-25T10:13:28Z",
-      "completion_time": "2026-04-25T10:21:16Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 25,
+      "rank": 19,
       "github_id": "Aozaki-aok0",
       "score": 10.0,
       "total_score": 100.0,
@@ -3800,7 +3080,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 26,
+      "rank": 20,
       "github_id": "mhubing",
       "score": 10.0,
       "total_score": 100.0,
@@ -3810,17 +3090,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 27,
-      "github_id": "KeyBor",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-28T05:52:57Z",
-      "completion_time": "2026-04-28T06:00:31Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 28,
+      "rank": 21,
       "github_id": "adgnaf",
       "score": 10.0,
       "total_score": 100.0,
@@ -3830,17 +3100,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 29,
-      "github_id": "yunyi1201",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-04-30T02:03:39Z",
-      "completion_time": "2026-04-30T02:13:06Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 30,
+      "rank": 22,
       "github_id": "eternal-echo",
       "score": 10.0,
       "total_score": 100.0,
@@ -3850,7 +3110,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 31,
+      "rank": 23,
       "github_id": "PingGuoMiaoMiao",
       "score": 10.0,
       "total_score": 100.0,
@@ -3860,27 +3120,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 32,
-      "github_id": "lusixing",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-04T09:14:07Z",
-      "completion_time": "2026-05-04T09:22:00Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 33,
-      "github_id": "destinyFvcker",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-06T14:01:19Z",
-      "completion_time": "2026-05-06T14:09:12Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 34,
+      "rank": 24,
       "github_id": "Sutter099",
       "score": 10.0,
       "total_score": 100.0,
@@ -3890,7 +3130,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 35,
+      "rank": 25,
       "github_id": "skinterqwe",
       "score": 10.0,
       "total_score": 100.0,
@@ -3900,7 +3140,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 36,
+      "rank": 26,
       "github_id": "73fc",
       "score": 10.0,
       "total_score": 100.0,
@@ -3910,7 +3150,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 37,
+      "rank": 27,
       "github_id": "yunjianshijie",
       "score": 10.0,
       "total_score": 100.0,
@@ -3920,7 +3160,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 38,
+      "rank": 28,
       "github_id": "scrail",
       "score": 10.0,
       "total_score": 100.0,
@@ -3930,7 +3170,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 39,
+      "rank": 29,
       "github_id": "zhenbaii",
       "score": 10.0,
       "total_score": 100.0,
@@ -3940,7 +3180,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 40,
+      "rank": 30,
       "github_id": "lingqian-gi",
       "score": 10.0,
       "total_score": 100.0,
@@ -3950,7 +3190,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 41,
+      "rank": 31,
       "github_id": "shengdaozm",
       "score": 10.0,
       "total_score": 100.0,
@@ -3960,7 +3200,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 42,
+      "rank": 32,
       "github_id": "trace1729",
       "score": 10.0,
       "total_score": 100.0,
@@ -3970,7 +3210,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 43,
+      "rank": 33,
       "github_id": "Firegooder",
       "score": 10.0,
       "total_score": 100.0,
@@ -3980,17 +3220,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 44,
-      "github_id": "bbbbbq",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-05-23T16:58:09Z",
-      "completion_time": "2026-05-23T17:05:42Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 45,
+      "rank": 34,
       "github_id": "enlist12",
       "score": 10.0,
       "total_score": 100.0,
@@ -4000,7 +3230,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 46,
+      "rank": 35,
       "github_id": "yuanyiboyyb",
       "score": 10.0,
       "total_score": 100.0,
@@ -4010,7 +3240,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 47,
+      "rank": 36,
       "github_id": "Opadc",
       "score": 10.0,
       "total_score": 100.0,
@@ -4020,7 +3250,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 48,
+      "rank": 37,
       "github_id": "flamboyante",
       "score": 10.0,
       "total_score": 100.0,
@@ -4030,7 +3260,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 49,
+      "rank": 38,
       "github_id": "LiuHongsGitHub",
       "score": 10.0,
       "total_score": 100.0,
@@ -4040,7 +3270,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 50,
+      "rank": 39,
       "github_id": "Eclipse-Arrebol",
       "score": 10.0,
       "total_score": 100.0,
@@ -4050,7 +3280,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 51,
+      "rank": 40,
       "github_id": "cn-sys",
       "score": 10.0,
       "total_score": 100.0,
@@ -4060,7 +3290,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 52,
+      "rank": 41,
       "github_id": "flespark",
       "score": 10.0,
       "total_score": 100.0,
@@ -4070,7 +3300,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 53,
+      "rank": 42,
       "github_id": "littlewangzai-orz",
       "score": 10.0,
       "total_score": 100.0,
@@ -4080,7 +3310,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 54,
+      "rank": 43,
       "github_id": "csdjr",
       "score": 10.0,
       "total_score": 100.0,
@@ -4090,7 +3320,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 55,
+      "rank": 44,
       "github_id": "2zuqisong",
       "score": 10.0,
       "total_score": 100.0,
@@ -4100,7 +3330,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 56,
+      "rank": 45,
       "github_id": "srhashdh",
       "score": 10.0,
       "total_score": 100.0,
@@ -4110,7 +3340,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 57,
+      "rank": 46,
       "github_id": "xiaoerlang0359-debug",
       "score": 10.0,
       "total_score": 100.0,
@@ -4120,17 +3350,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 58,
-      "github_id": "luis-233",
-      "score": 10.0,
-      "total_score": 100.0,
-      "run_time": "2026-06-08T02:24:01Z",
-      "completion_time": "2026-06-08T02:31:27Z"
-    },
-    {
-      "stage": "professional",
-      "direction": "rust",
-      "rank": 59,
+      "rank": 47,
       "github_id": "Gmikele",
       "score": 10.0,
       "total_score": 100.0,
@@ -4140,7 +3360,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 60,
+      "rank": 48,
       "github_id": "rhbfc",
       "score": 10.0,
       "total_score": 100.0,
@@ -4150,7 +3370,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 61,
+      "rank": 49,
       "github_id": "serf-huik",
       "score": 10.0,
       "total_score": 100.0,
@@ -4160,7 +3380,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 62,
+      "rank": 50,
       "github_id": "jensenojs",
       "score": 10.0,
       "total_score": 100.0,
@@ -4170,7 +3390,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 63,
+      "rank": 51,
       "github_id": "dazuo233",
       "score": 10.0,
       "total_score": 100.0,
@@ -4180,7 +3400,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 64,
+      "rank": 52,
       "github_id": "refr66",
       "score": 10.0,
       "total_score": 100.0,
@@ -4190,7 +3410,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 65,
+      "rank": 53,
       "github_id": "First-da",
       "score": 10.0,
       "total_score": 100.0,
@@ -4200,7 +3420,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 66,
+      "rank": 54,
       "github_id": "asdfgh870",
       "score": 10.0,
       "total_score": 100.0,
@@ -4210,7 +3430,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 67,
+      "rank": 55,
       "github_id": "WhiteBearI",
       "score": 10.0,
       "total_score": 100.0,
@@ -4220,7 +3440,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 68,
+      "rank": 56,
       "github_id": "yyxt-xwy",
       "score": 10.0,
       "total_score": 100.0,
@@ -4230,7 +3450,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 69,
+      "rank": 57,
       "github_id": "xiex386",
       "score": 10.0,
       "total_score": 100.0,
@@ -4240,7 +3460,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 70,
+      "rank": 58,
       "github_id": "dweeqhd",
       "score": 10.0,
       "total_score": 100.0,
@@ -4250,7 +3470,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 71,
+      "rank": 59,
       "github_id": "jieniguiemmm",
       "score": 10.0,
       "total_score": 100.0,
@@ -4260,7 +3480,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 72,
+      "rank": 60,
       "github_id": "litianxing2016",
       "score": 10.0,
       "total_score": 100.0,
@@ -4270,7 +3490,7 @@
     {
       "stage": "professional",
       "direction": "rust",
-      "rank": 73,
+      "rank": 61,
       "github_id": "ovwxxwvo",
       "score": 10.0,
       "total_score": 100.0,
