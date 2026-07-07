@@ -147,12 +147,12 @@ jobs:
             exit 0
           fi
 
-          if ! echo "$merge_output" | grep -q "Auto merge is not allowed"; then
+          if ! echo "$merge_output" | grep -Eq "Auto merge is not allowed|enablePullRequestAutoMerge"; then
             echo "$merge_output" >&2
             exit "$merge_status"
           fi
 
-          echo "::warning::Repository auto-merge is disabled; waiting for PR checks before direct merge."
+          echo "::warning::Repository auto-merge is unavailable; waiting for PR checks before direct merge."
           for attempt in {1..30}; do
             set +e
             checks_output="$(gh pr checks "$PR_NUMBER" --watch --interval 10 --fail-fast 2>&1)"
