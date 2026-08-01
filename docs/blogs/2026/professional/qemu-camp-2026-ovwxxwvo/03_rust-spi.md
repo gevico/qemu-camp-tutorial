@@ -47,8 +47,7 @@
 ```  
 
 - `./rust/Cargo.toml`顶层`workspace`添加相应的`crate`，这样lsp才能生效，必要时`cargo clean`。  
-- `./rust/hw/ssi/rust_spi/meson.build`文件中`_rust_spi_rs`需要添加  
-  `{'.': _rust_spi_bindings_inc_rs},` 。  
+- `./rust/hw/ssi/rust_spi/meson.build`文件中`_rust_spi_rs`需要添加`{'.': _rust_spi_bindings_inc_rs},` 。  
 
 ### 🛠️ 项目混合编程对接文件  
 ```  
