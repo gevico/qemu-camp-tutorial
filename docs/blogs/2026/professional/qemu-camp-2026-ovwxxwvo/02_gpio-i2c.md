@@ -28,9 +28,9 @@
 ```  
 
 - 项目文件结构的设计是为了减少QEMU的C代码对RUST代码的多次调用。  
-- 主控设备实现的crate(gpio_i2c)是唯一提供给QEMU调用的接口，每个主控都是独立的crate。  
-- 主控总线和从机特性的实现的crate(i2c_core)仅在RUST内部供主控和从机的实现使用。  
-- 从机外设的实现将在crate(i2c_slave)以mod形式存在，每个从机外设都为独立的mod。  
+- 主控设备实现的crate(`gpio_i2c`)是唯一提供给QEMU调用的接口，每个主控都是独立的crate。  
+- 主控总线和从机特性的实现的crate(`i2c_core`)仅在RUST内部供主控和从机的实现使用。  
+- 从机外设的实现将在crate(`i2c_slave`)以mod形式存在，每个从机外设都为独立的mod。  
 
 ### 🛠️ 项目构建所需修改文件  
 ```  
@@ -135,11 +135,12 @@ processor                 controller                   peripheral
 ```  
 ```  
    /-SDA-<->- start+[7addr+1rw](tx)+n|ack(rx)+[8data](tx)+n|ack(rx)+stop -<->-SDA-\  
-I2C device                                                                    I2C controller  
+I2C peripheral                                                                I2C controller  
    \-SCL----- ------            ...12345678...123456789...         ----- -----SCL-/  
 ```  
 
 - I2C协议，两线一时钟(SCL)一数据(SDA)，单线进行数据收发。  
+- 主控选择哪个从机通信，依靠传输数据包内的设备地址，有独立地址寄存器。  
 - 启停信号由主控写控制寄存器触发，不作保存。  
 - 应答信号由字节接收方发起，应答判定结果保存在状态寄存器。  
 - 7位地址+1位读写标记，构成8位保存在地址寄存器，由主控发起。  
@@ -154,11 +155,11 @@ pub struct I2CBus {
 }  
 
 impl I2CBus {  
-    pub fn new             // 创建I2C总线，初始化设备列表及当前寻址地址  
-    pub fn device_count    // 统计I2C总线上挂载的从设备数量  
+    pub fn new             // 创建总线，初始化设备列表及当前寻址地址  
+    pub fn device_count    // 统计总线上挂载的从设备数量  
     pub fn is_busy         // 判断总线是否正在传输  
 
-    pub fn attach          // 挂载I2C从机到I2C总线  
+    pub fn attach          // 挂载从机到总线  
     pub fn start_transfer  // 返回开始信号，保存地址，确定主机读写  
     pub fn end_transfer    // 返回结束信号，设置地址为空  
     pub fn send            // 发送数据，调用从机发送函数  
@@ -172,10 +173,10 @@ impl I2CBus {
 ### 🧩 I2C_SLAVE的实现框架  
 ```  
 pub struct AT24C02Slave {  
-    pub addr: u8,          // 从机设备地址  
-    pub regs: [u8; 256],   // EEPROM存储数组  
-    pub pointer: u8,       // 存储读写指针  
-    pub first_byte: bool,  // 标记首字节  
+    pub addr      : u8,         // 从机设备地址  
+    pub regs      : [u8; 256],  // EEPROM存储数组  
+    pub pointer   : u8,         // 存储读写指针  
+    pub first_byte: bool,       // 标记首字节  
 }  
 
 impl I2CSlave for AT24C02Slave {  
@@ -201,6 +202,8 @@ impl GPIOI2CRegisters {
         match offset {  
             ADDR     => self.addr     = Addr::from(value),  
             DATA     => self.data     = value,  
+
+        // I2C主从数据传输由写控制寄存器触发，需实现5个逻辑分支：  
             CTRL     => {  
                 let mut i2c_bus = device.i2c_bus.borrow_mut();  
                 let mut ctrl = Ctrl::from(value);  
