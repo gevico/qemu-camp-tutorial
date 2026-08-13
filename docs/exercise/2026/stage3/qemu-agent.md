@@ -30,4 +30,10 @@
 3. 建模产物：提供 Agent 生成或辅助生成的外设模型、寄存器定义、测试用例和验证日志。
 4. 代码链接：提交可复现的代码仓库、运行脚本和必要的数据说明。
 
+## 阶段成果参考
+
+- [Agent 自动化外设建模][project-blog]：包含 K230 RMU 与 STM32F103 GPIO 建模、QEMU 上游协作，
+  以及建模 Agent 的状态管理、API 边界和后续验证路线。
+
 [tutorial]: ../../../tutorial/2026/ch3/qemu-agent.md
+[project-blog]: ../../../blogs/2026/project/llm-auto-model.md

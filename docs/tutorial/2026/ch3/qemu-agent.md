@@ -42,6 +42,12 @@
 
 Benchmark 衡量的应是整个闭环能否稳定产出可运行、可解释的外设模型，而不是一次代码生成看起来是否完整。
 
+## 项目阶段实践
+
+阶段总结 [Agent 自动化外设建模][project-blog] 记录了 K230 RMU、STM32F103 GPIO 的上游建模经验，
+以及 `qemu-agent` 从通用 Agent 原型走向 QEMU 专用建模工具链的三次架构演进。阅读时可以重点对照
+资料证据、Reg-IR、受控副作用和 qtest 验证如何构成建模闭环。
+
 ## 需要复习的讲义
 
 - [面向对象建模][qemu-qom]与[地址空间抽象][qemu-mr]：理解设备类型、实例和 MMIO 容器。
@@ -51,6 +57,7 @@ Benchmark 衡量的应是整个闭环能否稳定产出可运行、可解释的�
 - [AI 开发提示](../../../exercise/2026/stage3/index.md#ai)：明确人工审查、许可证和上游贡献边界。
 
 [project-task]: ../../../exercise/2026/stage3/qemu-agent.md
+[project-blog]: ../../../blogs/2026/project/llm-auto-model.md
 [qemu-debug]: ../ch1/qemu-debug.md
 [qemu-hw]: ../ch2/qemu-hw.md
 [qemu-intr]: ../ch2/qemu-intr.md
