@@ -312,6 +312,7 @@ nav:
           - Agent 自动化外设建模: blogs/2026/project/llm-auto-model.md
         - xiex386:
           - K230 SDHCI建模: blogs/2026/project/xiex386/k230-sdhci-qemu.md
+        - WhiteBearI: blogs/2026/project/cxl_summary_blog_whitebear.md
     - 训练营 2025:
       - 专业阶段总结 LordaeronESZ: blogs/2025/qemu-camp-2025-LordaeronESZ.md
     - 其他技术博客:
