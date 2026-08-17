@@ -8,9 +8,9 @@
 
 ------
 
-## 一、issue背景
+## 一、issue 背景
 
-### 1.1 issue目标
+### 1.1 issue 目标
 
 K230 SoC 内部包含 5 个 I2C 控制器。在真实硬件中，Linux 通过 MMIO 寄存器配置控制器，包括设置目标从设备地址、向 FIFO 提交读写命令，以及通过状态寄存器和中断获取传输结果。QEMU 中不存在实际的 I2C 控制器电路，所以这些对 Guest 可见的硬件行为需要由设备模型来模拟。
 
@@ -56,8 +56,8 @@ Guest Linux 会根据这一 `compatible` 匹配现有的 I2C 控制器驱动。�
 K230 的 TX FIFO 深度为 32，RX FIFO 深度为 64：
 
 ```text
-TX FIFO：32 × 32 bit
-RX FIFO：64 × 8 bit
+TX FIFO: 32 × 32 bit
+RX FIFO: 64 × 8 bit
 ```
 
 第一版暂未实现 DMA、10-bit addressing、Slave mode、multi-master、Bus Clear、Device ID transaction、raw START BYTE transmission 和完整硬件 timing。Slave 和 multi-master 不属于当前 K230 Linux 的主要使用场景；DMA 除配置寄存器外，还需要建立 I2C FIFO 与 DMA controller 之间实际的数据请求通路，因此没有纳入当前实现。10-bit addressing 在线路上需要发送两个地址字节，其中 10-bit read 还要先进行一次写方向地址阶段，再通过 repeated START 切换到读方向，不能直接沿用当前的 7-bit 地址流程。START BYTE 则要求在正常目标地址之前发送一个特殊的原始字节，而当前 QEMU I2C 总线接口没有直接提供这一操作，因此第一版只保留了相关配置检查和 abort 行为。Bus Clear、Device ID 和更完整的 timing 行为与当前 Linux 基本 I2C 读写链路关系较小，也暂时没有纳入第一版。
@@ -369,7 +369,7 @@ k230_i2c_queue_reads(qts, base, len, true, true);
 
 qtest 通过后，又使用 `k230-boot-assets` 启动完整 Guest Linux 进行系统级验证。当前 DTB 中启用了 I2C4，Linux 可以正常完成设备树解析和控制器初始化，并创建 `/dev/i2c-0`；PLIC IRQ25 也能够收到 I2C4 产生的中断，说明 MMIO 和 IRQ 两条链路都已经正确接入 Guest。
 
-Linux 测试同样在 I2C bus 上挂载 TMP105 和 `i2c-echo`，再通过 `i2c-tools` 验证普通单字节和多字节读写、combined write/read、repeated START、STOP、地址 NACK、数据 NACK以及 abort 后恢复。正常事务能够完成数据交换；访问不存在的 slave 地址时，Linux 能够通过 `TX_ABRT` 得到错误；数据阶段的 NACK 也可以正确反馈给 Guest。清除 abort 状态以后，controller 仍然可以继续执行下一笔 transaction。
+Linux 测试同样在 I2C bus 上挂载 TMP105 和 `i2c-echo`，再通过 `i2c-tools` 验证普通单字节和多字节读写、combined write/read、repeated START、STOP、地址 NACK、数据 NACK 以及 abort 后恢复。正常事务能够完成数据交换；访问不存在的 slave 地址时，Linux 能够通过 `TX_ABRT` 得到错误；数据阶段的 NACK 也可以正确反馈给 Guest。清除 abort 状态以后，controller 仍然可以继续执行下一笔 transaction。
 
 完整链路可以表示为：
 
@@ -385,7 +385,7 @@ DTB → Linux I2C Driver → MMIO → K230 I2C Model → I2CBus → Slave
 
 ## 七、总结
 
-本issue完成了 K230 5 个 I2C controller 的 QEMU 建模和 SoC 集成。模型通过 MMIO 向 Guest 提供控制器寄存器接口，并实现了 TX/RX FIFO、中断、Master 7-bit addressing、普通读写、combined transfer、repeated START、STOP、NACK 和 `TX_ABRT` 等主要行为；实际总线传输则通过 QEMU `I2CBus` 与独立的 slave model 进行。
+本 issue 完成了 K230 5 个 I2C controller 的 QEMU 建模和 SoC 集成。模型通过 MMIO 向 Guest 提供控制器寄存器接口，并实现了 TX/RX FIFO、中断、Master 7-bit addressing、普通读写、combined transfer、repeated START、STOP、NACK 和 `TX_ABRT` 等主要行为；实际总线传输则通过 QEMU `I2CBus` 与独立的 slave model 进行。
 
 从整个建模过程来看，可以把主要工作分成三个层次。首先是 Guest 能够直接访问的控制器接口，包括 MMIO、寄存器、FIFO 和中断；其次是 `IC_DATA_CMD` 到 I2C transaction 的转换，需要处理地址阶段、数据读写、repeated START、NACK 和 STOP；最后是 K230 SoC 与 Linux 的系统集成，包括设备树、PLIC、控制器驱动和用户态 I2C 工具。qtest 主要验证前两部分，Guest Linux 则用来确认整个链路最终能够正常工作。
 
