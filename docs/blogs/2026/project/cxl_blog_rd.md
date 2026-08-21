@@ -8,8 +8,6 @@
 >
 > 本阶段聚焦加速卡后端编译栈（HetGPU），QEMU CXL 设备与 CXLMemSim 的集成尚未开始。
 >
-> 内容或有不实及待改进之处，还请大佬指正。
->
 > 本文含 AI 辅助创作，请注意甄别。
 
 **TL;DR**：SASS lifter 这条路修不好、也不值得修——它的下游消费者同样不扎实。最终我放弃 HetGPU、改走 PyTorch/TVM。但开发中沉淀的 harness 方法论（让 agent 执行形成闭环的验证工程）可以迁移到任何 AI 辅助开发场景。
@@ -274,7 +272,7 @@ SASS 是 NVIDIA GPU 的真实机器码，PTX 是 NVIDIA 定义的虚拟指令集
 
 !!! note "叠甲声明"
 
-    我的开发就是在这里烂尾的。
+    由于方向错误，我的开发在这里被迫停止。
 
 指令和 modifier 覆盖度低是最早的问题。一开始尝试走 decode 路线最终失败，后来看了 NVLift 论文<sup>[14]</sup>和 lifter 源码，最终选择解析 cuobjdump<sup>[15]</sup> 生成的字符串。
 
