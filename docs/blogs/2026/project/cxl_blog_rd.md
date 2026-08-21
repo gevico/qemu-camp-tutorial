@@ -1,10 +1,10 @@
-# 失败复盘：CXLMemSim 项目第一阶段 - rd
+# CXLMemSim Blog - rd
 
 !!! note "主要贡献者"
 
     - 作者：[@random25160765-collab](https://github.com/random25160765-collab)
 
-> CXLMemSim 项目第一阶段复盘（2026 年 7 月），兼个人工程经验总结。
+> CXLMemSim 项目复盘与 Postmortem（2026 年 7 月），兼个人工程经验总结。
 >
 > 本阶段聚焦加速卡后端编译栈（HetGPU），QEMU CXL 设备与 CXLMemSim 的集成尚未开始。
 >
