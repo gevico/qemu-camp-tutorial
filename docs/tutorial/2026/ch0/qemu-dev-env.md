@@ -83,11 +83,14 @@ QEMU 使用 Meson 构建系统，`./configure` 是其封装脚本。
 
 ### 最小化配置（推荐）
 
-训练营课程主要使用 RISC-V 架构，建议只编译所需的 target 以加快构建速度：
+训练营课程主要使用 RISC-V 架构，建议只编译所需的 target 以加快构建速度。下面的命令从 **QEMU 源码根目录** 开始执行。配置和编译在 `build/` 中完成，随后回到源码根目录：
 
 ```bash
-mkdir build && cd build
+mkdir -p build
+cd build
 ../configure --target-list=riscv64-softmmu --enable-slirp
+ninja
+cd ..
 ```
 
 ### 开发调试配置
@@ -95,7 +98,11 @@ mkdir build && cd build
 如需使用 GDB 调试 QEMU 源码，添加调试信息：
 
 ```bash
+mkdir -p build-debug
+cd build-debug
 ../configure --target-list=riscv64-softmmu --enable-debug --enable-slirp
+ninja
+cd ..
 ```
 
 ### 常用配置参数
@@ -111,16 +118,10 @@ mkdir build && cd build
 !!! tip "查看所有选项"
 
     ```bash
-    ../configure --help
+    ./configure --help
     ```
 
 ## 编译构建
-
-```bash
-make -j"$(nproc)"
-```
-
-或使用 Ninja（更快）：
 
 ```bash
 ninja -C build
@@ -201,11 +202,14 @@ cargo install bindgen-cli
 配置时添加 `--enable-rust` 并确保 `target-list` 包含 `riscv64-softmmu`：
 
 ```bash
-mkdir build-rust && cd build-rust
+mkdir -p build-rust
+cd build-rust
 ../configure \
     --target-list=riscv64-softmmu \
     --enable-rust \
     --enable-slirp
+ninja
+cd ..
 ```
 
 !!! tip "更多信息"
