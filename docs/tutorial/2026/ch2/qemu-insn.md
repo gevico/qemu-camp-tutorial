@@ -489,9 +489,12 @@ add x5, x6, x7  (0x007302B3)
 客户机示例 C 代码如下：
 
 ```c
-static int custom_cube(uintptr_t addr)
+#include <inttypes.h>
+#include <stdint.h>
+
+static uint64_t custom_cube(uintptr_t addr)
 {
-    int cube;
+    uint64_t cube;
     asm volatile (
        ".insn r 0x7b, 6, 6, %0, %1, x0"
         :"=r"(cube)  // 将结果存储在变量 cube 中
@@ -518,22 +521,28 @@ Helper 函数的使用方式与普通 C 程序类似。对于不了解 TCG ops �
 
 添加 cube 的指令语义实现（采用 Helper 实现）：
 
+下面的 Helper 按 RV64 的 `target_ulong` 读取一个 64 位操作数，并返回计算结果；寄存器写回交给 `gen_set_gpr()`，以保持 `x0` 恒为零。
+
 ```c {data-ppt-lines="10"}
 // target/riscv/helper.h
-DEF_HELPER_3(cube, void, env, tl, tl)
+DEF_HELPER_2(cube, tl, env, tl)
 
 // target/riscv/op_helper.c
-void helper_cube(CPURISCVState *env, target_ulong rd, target_ulong rs1)
+target_ulong helper_cube(CPURISCVState *env, target_ulong addr)
 {
-    MemOpIdx oi = make_memop_idx(MO_TEUQ, 0);
-    target_ulong val = cpu_ldq_mmu(env, env->gpr[rs1], oi, GETPC());
-    env->gpr[rd] = val * val * val;
+    target_ulong val = cpu_ldq_data_ra(env, addr, GETPC());
+
+    return val * val * val;
 }
 
 // target/riscv/insn_trans/trans_rvi.c.inc
 static bool trans_cube(DisasContext *ctx, arg_cube *a)
 {
-    gen_helper_cube(tcg_env, tcg_constant_tl(a->rd), tcg_constant_tl(a->rs1));
+    TCGv result = tcg_temp_new();
+    TCGv addr = get_gpr(ctx, a->rs1, EXT_NONE);
+
+    gen_helper_cube(result, tcg_env, addr);
+    gen_set_gpr(ctx, a->rd, result);
     return true;
 }
 
@@ -547,13 +556,13 @@ static bool trans_cube(DisasContext *ctx, arg_cube *a)
 
 ```c
 int main(void) {
-    int a = 3;
-    int ret = 0;
+    uint64_t a = 3;
+    uint64_t ret = 0;
     ret = custom_cube((uintptr_t)&a);
     if (ret == a * a * a) {
         printf("ok!\n");
     } else {
-        printf("err! ret=%d\n", ret);
+        printf("err! ret=%" PRIu64 "\n", ret);
     }
     return 0;
 }
